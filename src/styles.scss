@@ -10,6 +10,11 @@ justify-content: $jc;
 align-items: $ai;
     }
 
+$color-blue: #0091D2;
+$color-text: #323232;
+$color-white: #FFFFFF;
+
+
 .desk-max-width {
     width: 100%;
     max-width: 1020px;
@@ -18,6 +23,10 @@ align-items: $ai;
 a {
     font-family: 'Roboto';
     font-weight: lighter;
+    font-size: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $color-text;
 }
 
   // Margins
