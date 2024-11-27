@@ -13,6 +13,7 @@ align-items: $ai;
 $color-blue: #0091D2;
 $color-text: #323232;
 $color-white: #FFFFFF;
+$color-blue-transparancy: rgba(0,145,210,0.9);
 
 
 .desk-max-width {
@@ -21,12 +22,34 @@ $color-white: #FFFFFF;
   }
 
 a {
-    font-family: 'Roboto';
+    // font-family: 'Roboto';
+    font-family: 'SimLight';
     font-weight: lighter;
     font-size: 15px;
     text-decoration: none;
     text-transform: uppercase;
     color: $color-text;
+}
+
+p {
+  font-family: 'Newsreader';
+}
+
+.f-size-36 {
+  font-size: 36px;
+}
+
+.f-size-15 {
+  font-size: 15px;
+}
+
+h1 {
+  font-size: 90px;
+  text-decoration: underline;
+  text-underline-offset: 24px;
+  text-decoration-thickness: 6px;
+  font-family: "SimBold";
+  text-transform: uppercase;
 }
 
   // Margins
@@ -137,110 +160,86 @@ padding: 32px;
 
 
 
+/* SimBd___ - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'SimBold';
+  font-style: normal;
+  font-weight: 700; /* Assuming bold weight */
+  src: url('./assets/fonts/SimBd___.ttf') format('truetype');
+}
 
+/* SimLt___ - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'SimLight';
+  font-style: normal;
+  font-weight: 300; /* Assuming light weight */
+  src: url('./assets/fonts/SimLt___.ttf') format('truetype');
+}
 
+/* SimOb___ - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'SimOblique';
+  font-style: italic;
+  font-weight: 400; /* Assuming regular weight */
+  src: url('./assets/fonts/SimOb___.ttf') format('truetype');
+}
 
-
-
-
-
-
-
-
-/* roboto-100 - latin */
+/* newsreader-200 - latin */
 @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 100;
-    src: url('./assets/fonts/roboto-v32-latin-100.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-  }
-/* roboto-300 - latin */
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Newsreader';
+  font-style: normal;
+  font-weight: 200;
+  src: url('./assets/fonts/newsreader-v20-latin-200.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* newsreader-300 - latin */
 @font-face {
-    font-display: swap;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 300;
-    src: url('./assets/fonts/roboto-v32-latin-300.woff2') format('woff2');
-  }
-/* roboto-regular - latin */
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Newsreader';
+  font-style: normal;
+  font-weight: 300;
+  src: url('./assets/fonts/newsreader-v20-latin-300.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* newsreader-regular - latin */
 @font-face {
-    font-display: swap;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    src: url('./assets/fonts/roboto-v32-latin-regular.woff2') format('woff2');
-  }
-/* roboto-500 - latin */
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Newsreader';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./assets/fonts/newsreader-v20-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* newsreader-500 - latin */
 @font-face {
-    font-display: swap;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 500;
-    src: url('./assets/fonts/roboto-v32-latin-500.woff2') format('woff2');
-  }
-/* roboto-700 - latin */
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Newsreader';
+  font-style: normal;
+  font-weight: 500;
+  src: url('./assets/fonts/newsreader-v20-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* newsreader-600 - latin */
 @font-face {
-    font-display: swap;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 700;
-    src: url('./assets/fonts/roboto-v32-latin-700.woff2') format('woff2');
-  }
-/* roboto-900 - latin */
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Newsreader';
+  font-style: normal;
+  font-weight: 600;
+  src: url('./assets/fonts/newsreader-v20-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* newsreader-700 - latin */
 @font-face {
-    font-display: swap;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 900;
-    src: url('./assets/fonts/roboto-v32-latin-900.woff2') format('woff2');
-  }
-
-/* open-sans-300 - latin */
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Newsreader';
+  font-style: normal;
+  font-weight: 700;
+  src: url('./assets/fonts/newsreader-v20-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* newsreader-800 - latin */
 @font-face {
-    font-display: swap;
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 300;
-    src: url('./assets/fonts/open-sans-v40-latin-300.woff2') format('woff2');
-  }
-/* open-sans-regular - latin */
-@font-face {
-    font-display: swap;
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 400;
-    src: url('./assets/fonts/open-sans-v40-latin-regular.woff2') format('woff2');
-  }
-/* open-sans-500 - latin */
-@font-face {
-    font-display: swap;
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 500;
-    src: url('./assets/fonts/open-sans-v40-latin-500.woff2') format('woff2');
-  }
-/* open-sans-600 - latin */
-@font-face {
-    font-display: swap;
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 600;
-    src: url('./assets/fonts/open-sans-v40-latin-600.woff2') format('woff2');
-  }
-/* open-sans-700 - latin */
-@font-face {
-    font-display: swap;
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 700;
-    src: url('./assets/fonts/open-sans-v40-latin-700.woff2') format('woff2');
-  }
-/* open-sans-800 - latin */
-@font-face {
-    font-display: swap;
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 800;
-    src: url('./assets/fonts/open-sans-v40-latin-800.woff2') format('woff2');
-  }
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Newsreader';
+  font-style: normal;
+  font-weight: 800;
+  src: url('./assets/fonts/newsreader-v20-latin-800.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
