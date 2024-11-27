@@ -21,18 +21,18 @@
     position: absolute;
 }
 
-.flex-center {
-    @include display()
-}
+
 
 .main-content-box {
     @include display();
     flex-direction: column;
     background-color: $color-blue-transparancy;
-    width: 100%;
+    // width: 100%;
     color: $color-white;
     margin-top: -225px;
     position: relative;
+    margin-left: -40px;
+    margin-right: -40px;
 }
 
 p {

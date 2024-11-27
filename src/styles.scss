@@ -33,6 +33,11 @@ a {
 
 p {
   font-family: 'Newsreader';
+  margin: 0;
+}
+
+.f-color-text {
+  color: $color-text;
 }
 
 .f-size-36 {
@@ -50,6 +55,21 @@ h1 {
   text-decoration-thickness: 6px;
   font-family: "SimBold";
   text-transform: uppercase;
+}
+
+h2 {
+  font-size: 45px;
+  font-family: 'SimLight';
+  text-transform: uppercase;
+  color: $color-text;
+  font-weight: 300;
+  margin: 0;
+}
+
+
+
+.flex-center {
+  @include display()
 }
 
   // Margins
