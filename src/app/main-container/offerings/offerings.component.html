@@ -1,0 +1,16 @@
+<div class="flex-center">
+    <div class="desk-max-width">
+        <div class="main-content-box">
+            @for(offering of offeringsServiceData.offeringsData; track offering.title) {
+                <div class="offering-card">
+                    <img src="{{ offering.img }}" alt="">
+                    <div>
+                        <span class="img-title f-size-30">{{ offering.title }}</span>
+                    </div>
+                    <p class="f-size-15 f-color-text">{{ offering.description }}</p>
+                </div>
+            }
+            
+        </div>
+    </div>
+</div>

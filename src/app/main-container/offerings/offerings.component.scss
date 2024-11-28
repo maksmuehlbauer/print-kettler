@@ -1,0 +1,46 @@
+@import './../../../styles.scss';
+
+.main-content-box {
+    @include display($ai: flex-start, $jc: space-between);
+    margin-bottom: 200px;
+}
+
+
+.offering-card {
+    width: 31%;
+    // background-color: grey;
+    @include display();
+    flex-direction: column;
+    position: relative;
+    &:hover p, img, div {
+        cursor: pointer;
+        color: $color-blue
+    }
+    img {
+        width: 100%;
+        object-fit: cover;
+        margin-bottom: 104px;
+    }
+    >div {
+        position: absolute;
+        top: 160px;
+        left: 32px;
+        right: 32px;
+        background-color: $color-blue-transparancy;
+        color: $color-white;
+        text-transform: uppercase;
+        height: 112px;
+        @include display();
+        text-align: center;
+        .img-title {
+            font-family: 'SimLight';
+            line-height: 40px;   
+            // @include display();    
+        }
+    }
+    p {
+        line-height: 24px;
+
+    }
+}
+

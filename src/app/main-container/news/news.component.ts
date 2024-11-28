@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { KettlerService } from '../../kettler.service';
 
 @Component({
   selector: 'app-news',
@@ -8,5 +9,7 @@ import { Component } from '@angular/core';
   styleUrl: './news.component.scss'
 })
 export class NewsComponent {
+
+newsServiceData = inject(KettlerService)
 
 }

@@ -1,9 +1,10 @@
 @import './../../../styles.scss';
 
+:host {
+    margin-bottom: 200px;
+}
+
 .main-content-box {
-    // width: 100%;
-    // height: 200px;
-    // background-color: antiquewhite;
     margin-bottom: 200px;
 }
 
@@ -22,9 +23,13 @@
     }
 }
 
+.news-container {
+    @include display($ai: flex-start, $jc: space-between)
+}
+
 
 .news-card {
-    width: 30%;
+    width: 32%;
     display: flex;
     flex-direction: column;
     >.date {

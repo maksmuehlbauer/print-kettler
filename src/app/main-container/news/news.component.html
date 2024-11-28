@@ -9,16 +9,14 @@
                 </div>
             </div>
             <div class="news-container mt-32">
-                <div class="news-card">
-                    <span class="date mb-16 f-size-15">16. Mai 2024</span>
-                    <span class="title mb-16 f-size-15">Ökostrom</span>
-                    <p class="f-size-15 f-color-text">
-                        Die firmeneigene Photovoltaikanlage auf dem Dach unserer Produktionshalle 
-                        erzeugt jährlich 190.000 kWh und deckt damit ein Viertel unseres 
-                        Gesamtverbrauchs. Den übrigen Bedarf decken wir durch 100% Ökostrom unseres 
-                        örtlichen Versorgers.
-                    </p>
-                </div>
+                @for(news of newsServiceData.newsData; track news.date) {
+                    <div class="news-card">
+                        <!-- {{ $index + 1 }} -->
+                        <span class="date mb-16 f-size-15">{{ news.date }}</span>
+                        <span class="title mb-16 f-size-15">{{ news.title }}</span>
+                        <p class="f-size-15 f-color-text">{{ news.description }}</p>
+                    </div>
+                }
             </div>
         </div>
     </div>
