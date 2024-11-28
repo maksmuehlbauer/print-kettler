@@ -1,0 +1,39 @@
+@import './../../../styles.scss';
+
+
+.img-container {
+    height: 600px;
+    background-image: url("./../../../assets/img/exp-background.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: bottom;
+}
+
+.main-content-box {
+    @include display();
+    flex-direction: column;
+    background-color: $color-blue-transparancy;
+    // width: 100%;
+    color: $color-white;
+    margin-top: 300px;
+    position: relative;
+    margin-left: -40px;
+    margin-right: -40px;
+}
+
+h1 {
+    line-height: 128px;
+}
+
+p {
+    font-weight: 400;
+    line-height: 52px;
+    margin-top: 0;
+    margin-bottom: 80px;
+}
+
+.txt-align {
+    text-align: center;
+    // @include display()
+}
