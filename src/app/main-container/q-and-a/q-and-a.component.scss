@@ -1,0 +1,59 @@
+@import './../../../styles.scss';
+
+.main-content-box {
+    margin-top: 380px;
+    // margin-bottom: 250px;
+    @include display($ai: flex-start, $jc: space-between);
+    gap: 48px
+}
+
+.start-q-box {
+    @include display();
+}
+.card-title {
+    font-family: 'SimLight';
+    line-height: 40px;
+    color: $color-blue;
+    text-transform: uppercase;
+    margin-bottom: 23px;
+    display: block;
+}
+
+
+p {
+    line-height: 24px;
+}
+
+.question-p {
+    width: 66%;
+ }
+
+
+.start-question-box {
+    @include display($jc:space-between);
+    gap: 24px;
+}
+
+.card-1 {
+    width: 33%;
+}
+
+.card-2 {
+ width: 66%;
+}
+
+a {
+    background-color: #0091D2;
+    font-family: "SimBold";
+    color: #FFFFFF;
+    @include display();
+    gap: 24px;
+    width: 308px;
+    height: 56px;
+    >img {
+        height: 32px;
+    }
+    &:hover {
+        background-color: $color-blue-hover;
+    }
+}
