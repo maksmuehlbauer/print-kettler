@@ -1,9 +1,7 @@
 @import './../../../styles.scss';
 
 :host {
-    // background-color: aliceblue;
     height: calc(100vh - 81px);
-    // width: 300px;
     display: block;
 }
 
@@ -21,8 +19,6 @@
     object-fit: cover;
     position: absolute;
 }
-
-
 
 .main-content-box {
     @include display();

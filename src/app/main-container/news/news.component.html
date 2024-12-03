@@ -4,12 +4,12 @@
             <div class="news-title">
                 <h2>Neuigkeiten</h2>
                 <div class="slider-control">
-                    <a href=""><img src="./assets/img/arrow-left.png" alt="left arrow"></a>
-                    <a href=""><img src="./assets/img/arrow-right.png" alt="left arrow"></a>
+                    <img src="./assets/img/arrow-left.png" alt="left arrow" (click)="prevNews()">
+                    <img src="./assets/img/arrow-right.png" alt="left arrow" (click)="nextNews()">
                 </div>
             </div>
             <div class="news-container mt-32">
-                @for(news of newsServiceData.newsData; track news.date) {
+                @for(news of newsServiceData.newsData | slice:startIndex:startIndex+itemsPerPage; track news.date) {
                     <div class="news-card">
                         <!-- {{ $index + 1 }} -->
                         <span class="date mb-16 f-size-15">{{ news.date }}</span>

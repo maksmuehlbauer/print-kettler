@@ -16,18 +16,23 @@
     img {
         width: 64px;
         object-fit: cover;
+        &:hover {
+            cursor: pointer;
+        }
         
     }
 }
 
 .news-container {
-    @include display($ai: flex-start, $jc: space-between)
+    @include display($ai: flex-start, $jc: space-between);
+    overflow: hidden;
 }
 
 
 .news-card {
-    width: 32%;
+    // width: 32%;
     display: flex;
+    flex: 0 0 33%;
     flex-direction: column;
     >.date {
         color: $color-blue;
