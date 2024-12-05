@@ -30,6 +30,12 @@ newsData = [
     title: 'Fröhliche Weihnachten',
     description: 'Wir wünschen allen ein frohes Weihnachtsfest und einen guten Rutsch ins neue Jahr 2024. Ab dem 3. Januar 2024 sind wir wieder für Sie da.'
   }
+  ,
+  {
+    date: '18. Juni 2023',
+    title: 'Digitaldruck auf höchstem Niveau!',
+    description: 'Mit der HP Indigo 12000 HD bieten wir brillante Druckqualität und höchste Flexibilität. Beeindruckende Details, lebendige Farben und vielfältige Materialoptionen machen sie zur perfekten Wahl für individuelle und hochwertige Druckprodukte. Entdecken Sie modernste Technologie und profitieren Sie von schneller Produktion und nachhaltigen Vorteilen!'
+  }
 ]
 
 

@@ -8,8 +8,9 @@
         <img src="./assets/img/phone.png" class="img-icons" alt="">
         <span class="phone-number">02595 91013-0</span>
     </div>
-    <div class="upload-box blue-boxes ">
+    <div class="upload-box blue-boxes" (click)="openUploadDialog()">
         <img src="./assets/img/upload.png" class="img-icons" alt="">
         <span class="upload-text">Daten-Upload</span>
     </div>
 </header>
+<app-upload-form *ngIf="uplaodDialogOpen"></app-upload-form>

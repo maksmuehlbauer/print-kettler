@@ -1,0 +1,69 @@
+@import './../../styles.scss';
+
+.upload-background {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.upload-box {
+    height: 800px;
+    background-color: $color-blue-transparancy;
+    color: $color-white;
+    position: absolute;
+    top: 100px;
+    left: 200px;
+    right: 200px;
+    z-index: 2;
+    @include display($jc: flex-start);
+    flex-direction: column;
+}
+
+.input-box {
+    @include display();
+    gap: 50px;
+    width: 1020px;
+    
+}
+
+.input-card {
+    width: 45%;
+    height: 400px;
+    // background-color: grey;
+}
+
+
+input, textarea {
+    width: 100%;
+    padding-inline: 8px;
+    background-color: $color-blue-hover;
+    border: 0;
+    color: $color-white;
+    &::placeholder {
+        font-family: 'Newsreader';
+        font-weight: 500;
+        color: #40c4ff;
+        font-size: 15px
+    }
+}
+
+textarea {
+    height: 172px;
+    padding: 12px 0 0 8px;
+}
+
+
+
+.row-1,.row-2, .row-3, .row-4 {
+    display: flex;
+    height: 50px;
+    margin-bottom: 8px;
+}
+
+.row-2, .row-3 {
+    display: flex;
+    gap: 8px;
+}

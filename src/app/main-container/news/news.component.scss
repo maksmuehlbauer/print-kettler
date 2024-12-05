@@ -24,7 +24,8 @@
 }
 
 .news-container {
-    @include display($ai: flex-start, $jc: space-between);
+    @include display($ai: flex-start, $jc: flex-start);
+    gap: 24px;
     overflow: hidden;
 }
 
