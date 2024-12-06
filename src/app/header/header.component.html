@@ -13,4 +13,4 @@
         <span class="upload-text">Daten-Upload</span>
     </div>
 </header>
-<app-upload-form *ngIf="uplaodDialogOpen"></app-upload-form>
+<app-upload-form *ngIf="uplaodDialogOpen" (closeDialog)="closeUploadDialog()"></app-upload-form>

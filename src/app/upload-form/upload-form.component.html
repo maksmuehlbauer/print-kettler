@@ -1,5 +1,6 @@
 <div class="upload-background">
     <div class="upload-box">
+        <img src="./assets/img/close.png" alt="close" (click)="closeUplaodWindow()">
         <h1>Daten-Upload</h1>
         <form>
             <div class="input-box">
@@ -23,7 +24,33 @@
 
                 </div>
                 <div class="input-card">
-                    <h4>2. Druckdaten</h4>
+                    <h4 class="mb-16">2. Druckdaten</h4>
+                    <div 
+                    class="drop-zone" 
+                    (dragover)="onDragOver($event)" 
+                    (dragleave)="onDragLeave()" 
+                    (drop)="onDrop($event)"
+                    (click)="fileInput.click()"
+                  >
+                  Drag & Drop<br> oder<br> Klick
+
+                  <input 
+                      type="file" 
+                      multiple 
+                      #fileInput 
+                      (change)="onFileSelect($event)" 
+                      hidden 
+                    />
+                    <div class="preview">
+                        <div *ngFor="let file of files">
+                            <img src="./assets/img/close.png" alt="close"> 
+                            {{ file.name }}
+                        </div>
+                          
+                    </div>
+                </div>
+                  
+                  
                 </div>
             </div>
 

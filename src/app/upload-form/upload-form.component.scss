@@ -7,23 +7,32 @@
     left: 0;
     bottom: 0;
     z-index: 1;
-}
+    @include display();
 
 .upload-box {
     height: 800px;
+    width: 1200px;
     background-color: $color-blue-transparancy;
     color: $color-white;
-    position: absolute;
+    position: relative;
     top: 100px;
-    left: 200px;
-    right: 200px;
+    // left: 200px;
+    // right: 200px;
     z-index: 2;
     @include display($jc: flex-start);
     flex-direction: column;
+    >img {
+        position: absolute;
+        top: 0 ;
+        right: 0;
+        &:hover {
+            cursor: pointer;
+        }
+    }
 }
 
 .input-box {
-    @include display();
+    @include display($ai: stretch);
     gap: 50px;
     width: 1020px;
     
@@ -31,7 +40,7 @@
 
 .input-card {
     width: 45%;
-    height: 400px;
+    // height: 400px;
     // background-color: grey;
 }
 
@@ -67,3 +76,60 @@ textarea {
     display: flex;
     gap: 8px;
 }
+
+}
+
+.drop-zone {
+    width: 100%;
+    padding-inline: 8px;
+    background-color: $color-blue-hover;
+    border: 0;
+    color: $color-white;
+    font-family: 'SimBold';
+    text-transform: uppercase;
+    height: calc(265px + 95px);
+    font-size: 48px;
+    text-align: center;
+    @include display();
+    flex-direction: column;
+    &::placeholder {
+        font-family: 'Newsreader';
+        font-weight: 500;
+        color: #40c4ff;
+        font-size: 15px
+    }
+  }
+  
+  .drop-zone.dragging {
+    background-color: #f0f8ff;
+    border-color: #00aaff;
+  }
+
+  .preview {
+    @include display();
+    align-self: flex-start;
+
+  }
+    
+  .preview {
+    margin: 5px 0;
+    display: block;
+    display: inline-block;
+    max-width: 30ch; /* Beschränkt die Anzeige auf 10 Zeichen (ch = Breite eines Zeichens) */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Zeigt "..." an, falls Text abgeschnitten wird */
+    font-family: 'Newsreader';
+    font-weight: 200;
+    font-size: 16px;
+    >div {
+        display: flex;
+        align-items: center;
+        >img {
+            width: 16px;
+            height: 16px;
+            object-fit: cover;
+        }
+    }
+
+
+  }

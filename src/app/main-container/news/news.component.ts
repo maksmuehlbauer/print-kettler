@@ -12,6 +12,8 @@ import { KettlerService } from '../../kettler.service';
 export class NewsComponent {
 
 newsServiceData = inject(KettlerService)
+hoverLeft: boolean = false;
+hoverRight: boolean = false;
 
 startIndex = 0
 itemsPerPage = 3
