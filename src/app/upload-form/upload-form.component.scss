@@ -15,9 +15,7 @@
     background-color: $color-blue-transparancy;
     color: $color-white;
     position: relative;
-    top: 100px;
-    // left: 200px;
-    // right: 200px;
+    top: 40px;
     z-index: 2;
     @include display($jc: flex-start);
     flex-direction: column;
@@ -32,16 +30,12 @@
 }
 
 .input-box {
-    @include display($ai: stretch);
-    gap: 50px;
+    @include display($ai: stretch, $jc:space-between);
     width: 1020px;
-    
 }
 
 .input-card {
-    width: 45%;
-    // height: 400px;
-    // background-color: grey;
+    width: 48%;
 }
 
 
@@ -80,7 +74,7 @@ textarea {
 }
 
 .drop-zone {
-    width: 100%;
+    width: 97%;
     padding-inline: 8px;
     background-color: $color-blue-hover;
     border: 0;
@@ -130,6 +124,59 @@ textarea {
             object-fit: cover;
         }
     }
-
-
   }
+ 
+.info-box {
+    // background-color: lightgray;
+    width: 1020px;
+    height: 200px;
+    color: $color-white;
+    font-family: 'Newsreader';
+    font-weight: 500;
+    @include display($jc: space-between, $ai: flex-start);
+    a {
+        color: $color-white;
+        font-family: 'Newsreader';
+        text-transform: unset;
+        font-weight: 500;
+        text-decoration: underline;
+    }
+}
+
+input[type="checkbox"] {
+    width: auto !important; 
+}
+
+.f-weight {
+    font-weight: 300;
+    display: contents;
+    
+}
+
+.submit-data-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.submit-btn {
+    background-color: $color-white;
+    color: $color-blue !important;
+    text-decoration: none !important;
+    text-transform: uppercase !important;
+    padding: 8px 16px;
+    margin: 16px 0 0 0;
+    font-family: 'SimBold' !important;
+    @include display();
+    gap: 16px;
+    width: fit-content;
+    font-size: 15px;
+    align-self: flex-end;
+    &:hover {
+        background-color: $color-text;
+        color: $color-white !important;
+    }
+    img {
+        height: 30px;
+        object-fit: cover;
+    }
+}

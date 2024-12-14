@@ -53,6 +53,21 @@
                   
                 </div>
             </div>
+            <div class="info-box mt-16">
+                <div class="description f-size-15">
+                    <input type="checkbox"> Ich habe die <a href="">Datenschutzrechtliche Einwilligungserklärung</a> gelesen.*<br>
+                    *Pflichtfeld
+
+                    <h4 class="mt-32 mb-16">Haben Sie Fragen zur Datenübertragung?</h4>
+                    Wir helfen Ihnen gerne weiter: <span class="f-weight">Telefon 02595 910 13-0 oder <a href="">info&#64;druckerei-kettler.de</a></span>
+                </div>
+                <div class="submit-data-box">
+                    Erlaubte Datentypen: <span class="f-weight">pdf, rar, zip, jpg, tif (max. 1.000 MB)</span>
+                    <a href="" class="submit-btn" (mouseenter)="hovered = true" (mouseleave)="hovered = false">
+                        <img [src]="hovered ? './assets/img/arrow-white.png' : './assets/img/arrow-right-blue.png'" class="img-upload" alt="">Daten-upload
+                    </a>
+                </div>
+            </div>
 
         </form>
     </div>

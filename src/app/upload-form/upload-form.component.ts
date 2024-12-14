@@ -15,6 +15,8 @@ export class UploadFormComponent {
     this.closeDialog.emit();
   }
 
+  hovered: boolean = false;
+
 
   files: File[] = []; // Hochgeladene Dateien
 
