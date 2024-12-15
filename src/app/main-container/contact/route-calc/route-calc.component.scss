@@ -2,7 +2,8 @@
 
 .header-map-box {
     position: relative;
-    top: 81px;
+    // top: 81px;
+    // z-index: -10;
     height: 340px;
     @include display();
     background-color: #F0F0F0;

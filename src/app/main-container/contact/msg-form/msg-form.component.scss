@@ -1,0 +1,118 @@
+@import './../../../../styles.scss';
+
+.form-box {
+    width: 100%;
+    @include display();
+    gap: 16px;
+    margin-top: 80px;
+}
+
+.contact-us {
+    flex: 1;
+    align-self: flex-start;
+    h3 {
+        margin-top: 0;
+    }
+    p {
+        line-height: 24px;
+        font-weight: 400;
+        color: $color-text;
+        margin-bottom: 64px;
+    }
+}
+
+.f-bold {
+    font-family: 'SimBold';
+}
+
+ul {
+    color: $color-text;
+    list-style-type: none;
+    padding: 0;
+    font-family: 'SimLight';
+    text-transform: uppercase;
+
+    li {
+        margin-bottom: 4px;
+    a {
+        color: $color-blue;
+        text-decoration: underline;
+        &:hover {
+            color: $color-blue-hover;
+        }
+    }
+    }
+}
+
+form {
+    flex: 1;
+    // height: 200px;
+    display: flex;
+    align-self: flex-start;
+    flex-direction: column;
+    row-gap: 16px;
+
+}
+
+input {
+    all: unset;
+    height: 50px;
+    background-color: #F0F0F0;
+    padding-inline: 16px;
+    &::placeholder {
+        font-family: 'Newsreader';
+        font-weight: 400;
+        font-size: 15px
+    }
+}
+
+input[type="checkbox"] {
+   all: revert;
+   margin-right: 16px;
+
+}
+
+textarea {
+    height: 250px;
+    resize: vertical;
+    background-color: #F0F0F0;
+    border: 0;
+    &::placeholder {
+        padding: 16px;
+        font-family: 'Newsreader';
+        font-weight: 400;
+        font-size: 15px
+    }
+}
+
+.text-checkbox {
+    font-family: 'Newsreader';
+    color: $color-text;
+    a {
+        font-family: 'Newsreader';
+        text-transform: capitalize;
+        font-weight: normal;
+        text-decoration: underline;
+    }
+}
+
+.submit-btn {
+    background-color: #0091D2;
+    font-family: "SimBold";
+    color: #FFFFFF;
+    @include display();
+    gap: 24px;
+    width: 180px;
+    height: 50px;
+    >img {
+        height: 32px;
+    }
+    &:hover {
+        background-color: $color-blue-hover;
+    }
+}
+
+.flex-right {
+    display: flex;
+    align-self: flex-end;
+}
