@@ -1,0 +1,57 @@
+@import './../../../../styles.scss';
+
+.header-map-box {
+    position: relative;
+    top: 81px;
+    height: 340px;
+    @include display();
+    background-color: #F0F0F0;
+    width: 100%;
+    overflow: hidden;
+    img {
+        height: 340px;
+    }
+}
+
+
+.calc-route-box {
+    position: absolute;
+    background-color: $color-blue;
+    @include display();
+    gap: 16px;
+    padding: 20px;
+    >input {
+        all: unset;
+        width: 380px;
+        height: 50px;
+        padding-inline: 8px;
+        background-color: $color-blue-hover;
+        border: 0;
+        color: $color-white;
+        &::placeholder {
+            font-family: 'Newsreader';
+            font-weight: 500;
+            color: #40c4ff;
+            font-size: 15px
+        }
+    }
+    .route-btn {
+        width: 230px;
+        height: 50px;
+        @include display();
+        gap: 24px;
+        background-color: $color-white;
+        color: $color-blue;
+        &:hover {
+            background-color: $color-text;
+            color: $color-white;
+            cursor: pointer;
+        }
+    }
+    img {
+        height: 44px;
+        object-fit: cover;
+    }
+    
+}
+

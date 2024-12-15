@@ -11,7 +11,7 @@ import { CommonModule } from '@angular/common';
 })
 export class HeaderComponent {
 
-  uplaodDialogOpen: boolean = true;
+  uplaodDialogOpen: boolean = false;
 
   openUploadDialog() {
     this.uplaodDialogOpen = true;
