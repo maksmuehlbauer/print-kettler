@@ -8,6 +8,104 @@ export class KettlerService {
 
   constructor() { }
 
+  contactPersonData = [
+    {
+      name: "Gunnar Kettler",
+      titleOne: "Geschäftsführung",
+      phone: "02383 910 13-13",
+      email: "info@druckerei-kettler.de",
+      img: "./assets/img/gunnar_kettler.jpg"
+    },
+    {
+      name: "Marvin Prang",
+      titleOne: "Assistenz der Geschäftsführung",
+      titleTwo: "Prokurist",
+      phone: "02383 910 13-25",
+      email: "info@druckerei-kettler.de",
+      img: "./assets/img/marvin_prang.jpg"
+    },
+    {
+      name: "Max Mühlbauer",
+      titleOne: "Kundenbetreuung",
+      titleTwo: "Auftragsabwicklung",
+      titleThree: "Web to Print",
+      phone: "02383 910 13-10",
+      email: "info@druckerei-kettler.de",
+      img: "./assets/img/max_muehlbauer.jpeg"
+    },
+    {
+      name: "Jens Schulze",
+      titleOne: "Kundenbetreuung",
+      titleTwo: "Auftragsabwicklung",
+      phone: "02383 910 13-30",
+      email: "info@druckerei-kettler.de",
+      img: "./assets/img/jens_schulze.jpg"
+    },
+    {
+      name: "Nicole Hucke",
+      titleOne: "Buchhaltung",
+      phone: "02383 910 13-18",
+      email: "info@druckerei-kettler.de",
+      img: "./assets/img/nicole-hucke.jpg"
+    },
+    {
+      name: "Corinna Beutel",
+      titleOne: "Buchhaltung",
+      phone: "02383 910 13-17",
+      email: "info@druckerei-kettler.de",
+      img: "./assets/img/corinna_beutel.jpg"
+    },
+    {
+      name: "Jonas Sandhoff",
+      titleOne: "Kundenbetreuung",
+      titleTwo: "Auftragsabwicklung",
+      phone: "02383 910 13-38",
+      email: "info@druckerei-kettler.de",
+      img: "./assets/img/jonas_sandhoff.jpg"
+    },
+    {
+      name: "Anne Kettler",
+      titleOne: "Grafik",
+      titleTwo: "Design",
+      phone: "02383 910 13-34",
+      email: "info@druckerei-kettler.de",
+      img: "./assets/img/anne_kettler.jpg"
+    },
+    {
+      name: "Uwe Klein",
+      titleOne: "Druckvorstufe",
+      phone: "02383 910 13-12",
+      email: "info@druckerei-kettler.de",
+      img: "./assets/img/uwe-klein.jpg"
+    },
+    {
+      name: "Christiane Buchholz",
+      titleOne: "Druckvorstufe",
+      phone: "02383 910 13-12",
+      email: "info@druckerei-kettler.de",
+      img: "./assets/img/christiane-buchholz.jpg"
+    },
+    {
+      name: "Kevin Kretzer",
+      titleOne: "Digitaldruck",
+      phone: "02383 910 13-24",
+      email: "info@druckerei-kettler.de",
+      img: "./assets/img/kevin_kretzer.jpg"
+    },
+    {
+      name: "Jenifer Stürtz",
+      titleOne: "Digitaldruck",
+      phone: "02383 910 13-24",
+      email: "info@druckerei-kettler.de",
+      img: "./assets/img/jenifer_stuertz.jpg"
+    }
+  ];
+  
+
+  
+
+
+
 
 newsData = [
   {

@@ -1,0 +1,28 @@
+<div class="flex-center">
+    <div class="desk-max-width">
+        <div class="content-box">
+            <h2>
+                Ihre Ansprechpartner<br><span class="f-bold">Bei der Druckerei Kettler:</span>
+            </h2>
+            
+            <div class="persons-box">
+                    <div class="person-card" 
+                    *ngFor ="let person of contactPersons.contactPersonData; let i = index"
+                    (mouseenter)="hoveredIndex = i" 
+                    (mouseleave)="hoveredIndex = null">
+                        <img src="{{ person.img }}" alt="{{ person.name }}">
+                        <div class="person-information" [class.d-none]="hoveredIndex === i">
+                            <ul>
+                                <li>{{ person.name }}</li>
+                                <li>{{ person.titleOne}}</li>
+                                <li *ngIf="person.titleTwo">{{ person.titleTwo}}</li>
+                                <li *ngIf="person.titleThree">{{ person.titleThree}}</li>
+                                <li class="mt-8">{{ person.phone }}</li>
+                                <a href="#">{{ person.email }}</a>
+                            </ul>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>

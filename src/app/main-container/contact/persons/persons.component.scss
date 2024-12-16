@@ -1,0 +1,71 @@
+@import './../../../../styles.scss';
+
+.f-bold {
+    font-family: 'SimBold';
+}
+
+h2 {
+    color: $color-blue;
+}
+
+.persons-box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    // background-color: yellow;
+
+}
+
+.person-card {
+    // background-color: yellow;
+    position: relative;
+    // overflow: hidden;
+    img {
+        width: 100%;
+        // height: 100%;
+        object-fit: cover;
+        
+    }
+
+}
+
+.person-information {
+    display:none;
+}
+
+.person-card:hover .person-information {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 4px;
+    background-color: $color-blue-transparancy
+}
+
+.d-none {
+    display: flex;
+}
+
+ul {
+    padding: 0 0 8px 24px;
+    align-self: flex-end;
+    list-style-type: none;
+    font-family: 'SimLight';
+    color: $color-white;
+    text-transform: uppercase;
+    font-size: 15px;
+    li {
+        padding-bottom: 2px;
+    }
+    li:first-child {
+        font-family: 'SimBold';
+    }
+    a {
+        color: $color-white;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
