@@ -15,8 +15,5 @@ contactPersons = inject(KettlerService)
 
 hoveredIndex: number | null = null;
 
-// isHovered():string {
-//   return this.hovered ? 'person-information' : 'd-none'
-// }
 
 }

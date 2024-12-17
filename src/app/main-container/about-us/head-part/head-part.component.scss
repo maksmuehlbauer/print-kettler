@@ -1,0 +1,50 @@
+@import './../../../../styles.scss';
+
+h2 {
+    color: $color-blue;
+    margin: 64px 0 32px 0;
+}
+
+p {
+    color: $color-text;
+    font-size: 15px;
+    line-height: 20px;
+}
+
+.p-head {
+    font-size: 20px;
+    text-align: center;
+    line-height: 26px;
+
+}
+
+.text-box {
+    flex-direction: column;
+    margin-bottom: 96px;
+}
+
+h4 {
+    color: $color-blue;
+}
+
+.text-img-box {
+    @include display($ai: flex-start);
+    gap: 40px;
+    margin-left: 104px;
+    >div {
+        .img-outdoor {
+            flex: 1;
+            object-fit: cover;
+        }
+        p {
+            flex: 1;
+            line-height: 21px;
+        }
+    }
+
+}
+
+
+
+
+
