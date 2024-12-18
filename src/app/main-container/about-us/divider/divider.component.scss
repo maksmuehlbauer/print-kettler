@@ -1,0 +1,24 @@
+@import './../../../../styles.scss';
+
+
+div {
+    background-image: url('./../../../../assets/img/ueber-uns-trenner-zitat_1.jpg');
+    background-attachment: fixed;
+    width: 100%;
+    height: 340px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include display();
+    flex-direction: column;
+}
+
+.qoute-top, .qoute-bottom {
+    font-size: 70px;
+    color: $color-white;
+    font-family: 'Newsreader';
+    margin-left: 48px;
+}
+
+.qoute-top {
+    align-self: flex-start;
+}

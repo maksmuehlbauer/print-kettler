@@ -1,0 +1,34 @@
+@import './../../../../styles.scss';
+
+.row-1, .row-3 {
+    @include display($jc: flex-start);
+    gap: 96px;
+}
+
+.row-1 {
+    p{
+        align-self: flex-start;
+    }
+}
+
+.row-2 {
+    position: relative;
+    >div {
+        position: absolute;
+        left: 345px;
+        top: -200px;
+    }
+}
+
+.row-3 {
+    p{
+        align-self: flex-end;
+        padding-bottom: 64px;
+    }
+}
+
+p {
+    width: 400px;
+    line-height: 21px;
+}
+
