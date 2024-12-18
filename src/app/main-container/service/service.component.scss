@@ -1,0 +1,58 @@
+@import './../../../styles.scss';
+
+.pt-128 {
+    padding-top: 128px;
+}
+
+.card-box {
+    position: relative;
+    width: 100%;
+}
+
+.card {
+    width: 48%;
+    margin-bottom: 64px;
+}
+
+h2 {
+    color: $color-blue;
+    margin-bottom: 12px;
+}
+
+h3 {
+    margin-bottom: 16px;
+}
+
+h4 {
+    margin-bottom: 8px;
+    font-family: "Newsreader";
+    text-transform: none;
+    font-weight: 600;
+}
+
+p {
+    font-size: 15px;
+    line-height: 22px;
+    margin-bottom: 18px;
+    color: $color-text;
+}
+
+a {
+    color: #0091D2;
+    font-family: "Newsreader";
+    text-transform: none;
+    font-weight: 400;
+    text-decoration: underline;
+    &:hover {
+        color: $color-blue-hover;
+    }
+}
+
+.index-box {
+    background-color: lightgray;
+    width: 48%;
+    position: sticky;
+    right: 0;
+
+
+}
