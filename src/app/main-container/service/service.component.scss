@@ -7,10 +7,24 @@
 .card-box {
     position: relative;
     width: 100%;
+    // background-color: aqua;
+    @include display($jc: space-between, $ai: flex-start);
+    >.index-box {
+        background-color: #f0f0f0;
+        width: 45%;
+        position: sticky;
+        top: 128px;
+        display: flex;
+        flex-direction: column;
+        padding: 24px;
+    }
+    >.left-content {
+        width: 45%;
+    }
 }
 
 .card {
-    width: 48%;
+    width: 98%;
     margin-bottom: 64px;
 }
 
@@ -21,6 +35,7 @@ h2 {
 
 h3 {
     margin-bottom: 16px;
+    margin-top: 64px;
 }
 
 h4 {
@@ -43,16 +58,9 @@ a {
     text-transform: none;
     font-weight: 400;
     text-decoration: underline;
+    padding-bottom: 8px;
     &:hover {
         color: $color-blue-hover;
     }
 }
 
-.index-box {
-    background-color: lightgray;
-    width: 48%;
-    position: sticky;
-    right: 0;
-
-
-}

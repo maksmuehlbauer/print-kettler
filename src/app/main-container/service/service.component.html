@@ -1,37 +1,88 @@
 <div class="flex-center pt-128">
     <div class="desk-max-width">
         <div class="card-box">
-            <div class="index-box">
-                <h2>Überblick</h2>
-                <h4>Ansprechpartner</h4>
-                <h4>Dateiformat</h4>
-            </div>
-            <div class="card">
-                <h2>Druckdaten</h2>
-                <p>Damit Ihre fertigen Druckerzeugnisse tatsächlich so aussehen, wie sie am Bildschirm konzipiert wurden, 
-                    muss bei der Erstellung der Druckvorlagen eine Reihe von Richtlinien beachtet werden.
-                </p>
-                <p>
-                    Hier finden Sie unsere Vorgaben zu Dateiformaten und weitere wichtige Aspekte der Datenaufbereitung 
-                    sowie nützliche Downloads übersichtlich zusammengestellt. Bei spezifischen Fragen wenden Sie sich 
-                    bitte direkt an 
-                    <a href="contact">unsere Ansprechpartner.</a> 
-                </p>
-            </div>
-            <div class="card">
-                <h3>Dateiformate</h3>
+
+            <div class="left-content">
+                <p>Damit Ihre fertigen Druckerzeugnisse tatsächlich so aussehen, wie sie am 
+                Bildschirm konzipiert wurden, muss bei der Erstellung der Druckvorlagen eine Reihe von Richtlinien beachtet werden.
+                Hier finden Sie unsere Vorgaben zu Dateiformaten und weitere wichtige Aspekte der Datenaufbereitung sowie nützliche Downloads übersichtlich zusammengestellt. 
+                Bei spezifischen Fragen wenden Sie sich bitte direkt an 
+                <a href="contact">unsere Ansprechpartner.</a></p>
+            
+                <h3 id="data">DATEIFORMATE</h3>
                 <h4>Druckfertige Daten</h4>
                 <p>Druckfertige Dateien akzeptieren wir nur als PDF im Format PDF/X‑3:2002 oder PDF/X‑4:2008.</p>
-                
+            
                 <h4>Offene Daten</h4>
                 <p>Auf Anfrage und gegen Aufpreis nehmen wir offene Daten aus dem Layout-Programm Adobe InDesign an 
-                    und bereiten sie für die weitere Verwendung auf (siehe auch Druckvorstufe).</p>
-                
+                    und bereiten sie für die weitere Verwendung auf.</p>
+            
                 <h4>Abweichende Formate</h4>
-                <p>wenn auch Layout und Gestaltung von Medien zu Ihrem Auftrag gehören, können wir Daten in abweichenden Dateiformaten
-                    (z. B. aus Office-Anwendungen) entgegennehmen.
-                </p>
+                <p>Nur, wenn auch Layout und Gestaltung von Medien zu Ihrem Auftrag gehören, können wir Daten in abweichenden 
+                    Dateiformaten (z. B. aus Office-Anwendungen) entgegennehmen.</p>
+            
+                <h3 id="pdf">PDF-ERSTELLUNG</h3>
+                <h4>Allgemeine Vorgaben</h4>
+                <p>Schriften und Bilddaten müssen ins PDF eingebettet sein. Nur druckbare Elemente sind erlaubt – Kommentare, 
+                    Formularfelder, Videos etc. gehören nicht ins PDF. Gewünschte Leerseiten müssen mit gespeichert werden. 
+                    Bitte verzichten Sie auf einen Kennwortschutz.</p>
+            
+                <h4>Beschnitt</h4>
+                <p>Legen Sie Ihre Daten im Endformat mit 3 mm umlaufendem Beschnitt an.</p>
+                <p>Alle Abbildungen am Seitenrand, die angeschnitten werden sollen, sollten 3 mm über das Endformat reichen. 
+                    Inhalte die nicht angeschnitten werden sollen, müssen mindestens 5 mm vom Endformat entfernt platziert werden.</p>
+            
+                <h4>Broschüren & Kataloge</h4>
+                <p>Bitte liefern Sie PDFs für Broschüren und Kataloge als fortlaufende Einzelseiten (keine Doppelseiten/Montageflächen). Umschläge sollten als Montagefläche fertig ausgeschossen werden.</p>
+            
+                <h3 id="resolution">AUFLÖSUNG</h3>
+                <h4>Bildauflösung</h4>
+                <p>Für ein optimales Druckergebnis sollten Bilder bei Originalgröße mit mindestens 300 dpi angelegt sein. Ein niedrigerer Wert führt zu einem qualitativ schlechteren Druckergebnis. Bitte verzichten Sie auf das Interpolieren (Hochrechnen) von Abbildungen.</p>
+            
+                <h4>Linienstärken</h4>
+                <p>Um Probleme im weiteren Druckprozess zu vermeiden, legen Sie bitte dunkle Linien auf hellem Grund mit einer Mindeststärke von 0,25 pt (0,09 mm) an. Helle Linien auf dunklem Grund sollten mindestens eine Stärke von 0,5 pt (0,18 mm) haben.</p>
+            
+                <h3 id="colors">FARBEN</h3>
+                <h4>Farbmodus & Farbraum</h4>
+                <p>Druckdaten werden grundsätzlich im CMYK-Farbraum angelegt. Das umfasst auch alle verwendeten Bilder. 
+                    RGB-Daten sind nicht druckbar und werden daher automatisch in CMYK gewandelt. Daraus können Farbabweichungen entstehen.</p>
+            
+                <h4>Farbauftrag</h4>
+                <p>Der maximale Farbauftrag von 300% (C+M+Y+K) sollte nicht überschritten werden. 
+                    Legen Sie Fließtexte – wenn möglich – in nicht mehr als einer Farbe (z. B. 100% Schwarz) an.</p>
+            
+                <h4>Farbprofile</h4>
+                <p>Legen Sie Ihre Dateien mit den richtigen Profilen an. Nutzen Sie dazu unsere Farbprofile zum Download:</p>
+                <p><a href="#">Für gestrichene Papiere nutzen Sie das PSO Coated v3 Profil.</a></p>
+                <p><a href="#">Wählen Sie PSO Uncoated v3 Fogra 52 oder PSO Uncoated ISO12647 für ungestrichene Papiere.</a></p>
+                <p>Als Ausgabemethoden-Profil sollte das im Dokument verwendete Profil eingestellt sein.</p>
+            
+                <h3 id="proof">PROOF FORMATE</h3>
+                <p>Gerne erstellen wir Ihnen vor Druck ein farbverbindliches Proof. Dazu beachten Sie bitte die Proofgrößen für uncoated oder coated Papier.</p>
+            
+                <h4>Coated Papier</h4>
+                <p>DIN A1 (594 x 841 mm) ohne Beschnitt</p>
+            
+                <h4>Uncoated Papier</h4>
+                <p>DIN A2 (420 x 594 mm) ohne Beschnitt</p>
+            
+                <h3 id="next">WIE GEHT ES WEITER?</h3>
+                <p>Nachdem Ihre Druckdaten unseren Workflow durchlaufen haben, erhalten Sie von uns einen Softproof (heruntergerechnetes Proof-PDF). Nach Ihrer abschließenden Prüfung und der Erteilung der Freigabe beginnen wir umgehend mit der Produktion.</p>
+                <p>Gibt es noch offene Fragen?</p>
+                <a href="contact">Unsere Ansprechpartner beraten Sie gerne individuell.</a>
             </div>
+            <div class="index-box">
+                <h2>Überblick</h2>
+                <a href="contact">Ansprechpartner</a>
+                <a [routerLink]="[]" fragment="data">Dateiformat</a>
+                <a [routerLink]="[]" fragment="pdf">PDF-Erstellung</a>
+                <a [routerLink]="[]" fragment="resolution">Auflösung</a>
+                <a [routerLink]="[]" fragment="colors">Farben</a>
+                <a [routerLink]="[]" fragment="proof">Proof Formate</a>
+                <a [routerLink]="[]" fragment="next">Wie geht es weiter?</a>
+
+            </div>
+            
         </div>
     </div>
 </div>
