@@ -75,3 +75,48 @@ a {
         color: $color-white;
     }
 }
+
+a.active {
+    background-color: $color-blue;
+    color: $color-white;
+}
+
+.performance-hover-box {
+    width: 1020px;
+    height: 200px;
+    background-color: #FFFFFF;
+    border: 1px;
+    filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, 0.4));
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    @include display($jc: flex-start);
+    cursor: default;
+
+}
+
+h4 {
+    color: $color-blue;
+}
+
+.card {
+    @include display($ai: flex-start);
+    flex-direction: column;
+    width: 315px;
+    text-align: left;
+    line-height: 20px;
+    &:hover {
+        cursor: pointer;
+        p {
+            color: $color-blue-hover;
+        }
+    }
+}
+
+.hover-box-p {
+    color: $color-text;
+    font-family: 'Newsreader';
+    font-weight: 400;
+    text-transform: initial;
+}
