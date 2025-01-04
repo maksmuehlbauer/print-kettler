@@ -1,0 +1,33 @@
+<div class="flex-center">
+    <div class="desk-max-width">
+        <div class="content-box">
+            <div class="head-content">
+                <div class="text-box">
+                    <h2 class="mb-32">{{ catData.mainTitle }}</h2>
+                    <p class="f-size-15">{{ catData.mainDescription }}</p>
+                </div>
+                <div class="slider-box">
+                    <img [src]="catData.sliderArray[currentIndex]" alt="">
+                    <div class="slider-control mt-8">
+                        <div *ngFor="let circle of catData.sliderArray; let i = index" 
+                        class="circle"
+                        [class.active]="i === currentIndex"
+                        (click)="showImageIndex(i)"
+                        >
+                        <!-- empty div -->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="bottom-content mt-96">
+                <div *ngFor="let card of catData.cardInfos; let i = index" class="card">
+                    <img src="{{ card.img }}" alt="">
+                    <h3>{{ card.title }}</h3>
+                    <p class="f-size-15">{{ card.description }}</p>
+
+                </div>
+            </div>  
+        </div>
+    </div>
+</div>

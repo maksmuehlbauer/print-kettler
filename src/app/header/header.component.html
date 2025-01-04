@@ -4,14 +4,14 @@
         (mouseenter)="performanceHover = true" 
         (mouseleave)="performanceHover = false">Leistungen
             <div *ngIf="performanceHover" class="performance-hover-box">
-                <div class="card pl-32">
+                <a [routerLink]="['/sub', 'sheetfedoffset']" class="card pl-32">
                     <h4 class="pb-8">Bogenoffset</h4>
                     <p class="hover-box-p">Brillante Druckqualität für alle Formate und Auflagenhöhen – vom Flyer bis zum Plakat.</p>
-                </div>
-                <div class="card pl-32">
+                </a>
+                <a [routerLink]="['/sub', 'digitalprint']" class="card pl-32">
                     <h4 class="pb-8">Digitaldruck</h4>
                     <p class="hover-box-p">Personalisierte Druckmedien und kleine Auflagen schnell und zum Vorteils-Preis.</p>
-                </div>
+                </a>
             </div>
         </a>
 

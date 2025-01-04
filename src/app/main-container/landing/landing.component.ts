@@ -10,23 +10,23 @@ import { Component, OnInit } from '@angular/core';
 export class LandingComponent implements OnInit {
 
   ngOnInit() {
-    this.startSlider()
+    this.startSlider();
   }
 
-  sliderArray = [
+  sliderArray: string[] = [
     './assets/img/slider_01.jpg', 
     './assets/img/slider_02.jpg', 
     './assets/img/slider_03.jpg', 
     './assets/img/slider_04.jpg', 
   ]
 
-  currentIndex = 0;
+  currentIndex: number = 0;
 
     
   startSlider() {
     setInterval(() => {
       this.currentIndex = (this.currentIndex + 1) % this.sliderArray.length;
-    }, 5000); // Bild alle 3 Sekunden wechseln
+    }, 5000);
   }
 
 

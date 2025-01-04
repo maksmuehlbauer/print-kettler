@@ -1,0 +1,65 @@
+@import './../../../styles.scss';
+
+.content-box {
+    padding-top: 140px;
+}
+
+.head-content {
+    @include display($ai: flex-start);
+    >.text-box {
+        flex: 1;
+        p {
+            width: 80%;
+            color: $color-text;
+            line-height: 20px;
+        }
+    }
+    >.slider-box {
+        flex: 1;
+        @include display();
+        flex-direction: column;
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+        >.slider-control {
+            @include display();
+            gap: 8px;
+        }
+    }
+}
+
+.circle {
+    width: 12px;
+    height: 12px;
+    border-radius: 100%;
+    background-color: $color-blue;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.circle.active {
+    background-color: $color-blue-hover;
+}
+
+
+
+.bottom-content {
+    @include display($ai: flex-start);
+    gap: 32px;
+    .card {
+        @include display();
+        flex-direction: column;
+        img {
+            width: 108px;
+            object-fit: cover;
+        }
+        p {
+            color: $color-text;
+            line-height: 20px;
+        }
+    }
+
+}
+

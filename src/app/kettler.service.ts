@@ -137,22 +137,97 @@ newsData = [
 ]
 
 
-offeringsData = [
-  {
-    img: './assets/img/offerings_01.jpg',
-    title: 'Professional Service',
-    description: 'Von der Anfrage bis zur Auslieferung stehen wir Ihnen beratend zur Seite. Wir unterstützen Sie in Materialfragen, konfigurieren den idealen Produktionsablauf und liefern Top-Qualität zu einem fairen Preis. Auf Wunsch auch innerhalb von 24 Stunden.'
-  },  
-  {
-    img: './assets/img/offerings_02.jpg',
-    title: 'Buchproduktion',
-    description: 'Die Buchproduktion hat bei uns eine lange Tradition. Wir kennen die besonderen Anforderungen der Branche genau und bieten vom Layout bis zur individuellen Veredelung den passenden Service. Dank neuester Technik jetzt noch schneller und effizienter.'
-  },  
-  {
-    img: './assets/img/offerings_03.jpg',
-    title: 'Naturpapier',
-    description: 'So gute Voraussetzungen für den optimalen Druck auf ungestrichenen Papieren bieten nur Wenige: Unser spezieller Uncoated Workflow für Offset- und Digitaldruck garantiert eine beeindruckende Farbwiedergabe und Qualität, die man fühlen kann.'
-  },
-]
+  offeringsData = [
+    {
+      img: './assets/img/offerings_01.jpg',
+      title: 'Professional Service',
+      description: 'Von der Anfrage bis zur Auslieferung stehen wir Ihnen beratend zur Seite. Wir unterstützen Sie in Materialfragen, konfigurieren den idealen Produktionsablauf und liefern Top-Qualität zu einem fairen Preis. Auf Wunsch auch innerhalb von 24 Stunden.'
+    },  
+    {
+      img: './assets/img/offerings_02.jpg',
+      title: 'Buchproduktion',
+      description: 'Die Buchproduktion hat bei uns eine lange Tradition. Wir kennen die besonderen Anforderungen der Branche genau und bieten vom Layout bis zur individuellen Veredelung den passenden Service. Dank neuester Technik jetzt noch schneller und effizienter.'
+    },  
+    {
+      img: './assets/img/offerings_03.jpg',
+      title: 'Naturpapier',
+      description: 'So gute Voraussetzungen für den optimalen Druck auf ungestrichenen Papieren bieten nur Wenige: Unser spezieller Uncoated Workflow für Offset- und Digitaldruck garantiert eine beeindruckende Farbwiedergabe und Qualität, die man fühlen kann.'
+    },
+  ]
+
+
+  underCategoryData = {
+    sheetFedOffsetData: {
+      mainTitle: 'Bogenoffset',
+      mainDescription: 'Der Bogenoffsetdruck bietet optimale Druckqualität für unterschiedlichste Produkte – von Akzidenzen wie Visitenkarten, Briefbögen und Broschüren bis hin zu umfangreichen Geschäftsberichten und Büchern. Besonders für höhere Auflagen empfiehlt sich diese schnelle, flexible und rentable Druckmethode.',
+      sliderArray: [
+        './assets/img/leistungen-bogenoffset-slider-01.jpg',
+        './assets/img/leistungen-bogenoffset-slider-03.jpg',
+        './assets/img/leistungen-bogenoffset-slider-04.jpg'
+      ],
+      cardInfos: [
+        {
+          img: './assets/img/sizetypes.png',
+          title: 'Formatvielfalt',
+          description: 'Mit unserer 3B‑Bogenoffset-Druckmaschine sind wir in der Lage, Bogenformate bis 720 x 1.030 mm Größe und Materialstärken von 0,04 bis 0,8 mm in brillanter Qualität zu bedrucken. Damit ist von der Visitenkarte bis zum Werbeplakat wirklich alles möglich.'
+        },
+        {
+          img: './assets/img/color-precision.png',
+          title: 'Farbpräzision',
+          description: 'Wir stellen laufend die Farbverbindlichkeit Ihrer Drucke sicher: Vom konsequenten Colour Management durch ICC‑Profile über zertifizierte Proofs bis hin zum anspruchsvollen Druck mit frequenzmoduliertem Raster (FM‑Raster) tun wir alles für Ihr Produkt.'
+        },
+        {
+          img: './assets/img/special-color.png',
+          title: 'Schmuckfarbe',
+          description: 'Durch den Einsatz von HKS- und Pantone-Sonderfarben ist es möglich, auch außerhalb des normalerweise umsetzbaren Farbbereichs zu drucken. Bei uns geschieht das mit bis zu 8 Farbwerken und schnell trocknender UV‑Farbe effizient in nur einem Durchlauf.'
+        },
+        {
+          img: './assets/img/certified.png',
+          title: 'Zertifikate',
+          description: 'Unser Unternehmen ist FOGRA/UGRA-zertifiziert. Das garantiert die gleichbleibende Qualität bei der Farbwiedergabe von Prüfdrucken. Dass wir darüber hinaus auch den Umweltschutz ernst nehmen, zeigt unsere Zertifizierung nach FSC® und PEFC‑Richtlinien.'
+        }
+      ]
+    },
+    digitalPrintData: {
+      mainTitle: 'Digitaldruck',
+      mainDescription: 'Mit unserer HP Indigo 12000 HD eröffnen wir Ihnen neue Möglichkeiten in den Bereichen Personalisierung, Druckveredelung und Farbauswahl. Selbst Kleinstauflagen, speziell bei Buchproduktionen, sind kosteneffizient umsetzbar. Die hochauflösende HD-Drucktechnologie sorgt für weichere, moiréfreie Drucke mit verbesserter Detaildarstellung.',
+      sliderArray: [
+        './assets/img/leistungen-digitaldruck-slider-02.jpg',
+        './assets/img/leistungen-digitaldruck-slider-01.jpg',
+        './assets/img/leistungen-digitaldruck-slider-03.jpg'
+      ],
+      cardInfos: [
+        {
+          img: './assets/img/time.png',
+          title: 'Kurzfristig',
+          description: 'Im Digitaldruck werden die Druckdaten direkt vom Computer an die Druckmaschine übertragen. So ergeben sich deutlich kürzere Rüstzeiten. Aufträge können schnell und flexibel durchgeführt werden. Auch kleine Auflagen lassen sich wirtschaftlich umsetzen.'
+        },
+        {
+          img: './assets/img/individuel.png',
+          title: 'Indviduell',
+          description: 'Ein weiterer Vorteil: Jeder Bogen kann anders bedruckt werden. Das ermöglicht die Personalisierung Ihrer Printmedien, von der namentlichen Anrede bis hin zu inhaltlich abgestimmten Textpassagen für die persönliche, zielgruppengerechte Ansprache.'
+        },
+        {
+          img: './assets/img/quality.png',
+          title: 'Druckqualität',
+          description: 'Auch digital gedruckte Printmedien bestechen bei uns durch brillante, lebendige Farben. Wir können Digitalfotos in echter Fotoqualität produzieren und halten zudem das komplette Spektrum der PANTONE-Palette und andere Wunsch- und Spezialfarben bereit.'
+        },
+        {
+          img: './assets/img/selection.png',
+          title: 'Papierauswahl',
+          description: 'In unserem breiten Sortiment an Bedruckstoffen finden Sie bestimmt das geeignete Material für Ihr Produkt. Unterschiedliche gestrichene und ungestrichene Papiere, Etiketten, Folien und Spezialpapiere in verschiedensten Grammaturen stehen zur Wahl.'
+        }
+      ]
+    }
+  };
+
+  getSheedFedOffsetData() {
+    return this.underCategoryData.sheetFedOffsetData;
+  }
+
+  getDigitalPrintData() {
+    return this.underCategoryData.digitalPrintData;
+  }
+
 
 }
