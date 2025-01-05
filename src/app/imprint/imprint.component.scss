@@ -1,0 +1,25 @@
+@import './../../styles.scss';
+
+.main-content-box {
+    padding-top: 128px;
+    font-size: 15px;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+    font-family: 'Newsreader';
+    color: $color-text;
+    li {
+        padding-top: 4px;
+    }
+}
+
+p {
+    color: $color-text;
+    line-height: 22px;
+}
+
+.strong {
+    font-weight: 500;
+}
