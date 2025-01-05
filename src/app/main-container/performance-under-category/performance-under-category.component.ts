@@ -30,7 +30,7 @@ export class PerformanceUnderCategoryComponent implements OnInit {
   getRouteParameter() {
     this.route.params.subscribe(params => {
       const type = params['type'];
-      this.loadData(type);
+      this.loadData(type); //type is routerLink string
     }); 
   }
 
@@ -46,10 +46,10 @@ export class PerformanceUnderCategoryComponent implements OnInit {
 
   startSlider() {
     setInterval(() => {
-      this.currentIndex = (this.currentIndex + 1) % this.ucData.underCategoryData.sheetFedOffsetData.sliderArray.length;
+      this.currentIndex = (this.currentIndex + 1) % this.catData.sliderArray.length;
     }, 3000);
   }
-  
+
 
   showImageIndex(i: number) {
     this.currentIndex = i

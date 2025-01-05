@@ -102,39 +102,34 @@ export class KettlerService {
   ];
   
 
-  
-
-
-
-
-newsData = [
-  {
-    date: '16. Mai 2024',
-    title: 'Ökostrom',
-    description: 'Die firmeneigene Photovoltaikanlage auf dem Dach unserer Produktionshalle erzeugt jährlich 190.000 kWh und deckt damit ein Viertel unseres Gesamtverbrauchs. Den übrigen Bedarf decken wir durch 100% Ökostrom unseres örtlichen Versorgers.'
-  },
-  {
-    date: '20. April 2024',
-    title: 'Wir Suchen',
-    description: 'Fest: Medientechnolge Druck Ausbildung: Medientechnologe Druck Fest: Medientechnologe Druckverarbeitung Ausbildung: Medientechnologe Druckverarbeitung Aushilfen für die Weiterverarbeitung! Eine ausführliche Beschreibung finden Sie weiter unten unter der Rubrik »JOBS«!'
-  },
-  {
-    date: '2. März 2024',
-    title: 'Schneller, flexibler, rentabler – die Bogenoffset-Druckmaschine',
-    description: 'Die KOMORI LITHRONE GL-840P ist das Herzstück unseres Maschinenparks. Mit ihr bieten wir unseren Kunden nun noch hoch­wertigeren Service. Freuen Sie sich auf verkürzte Druckzeiten, besseres Ausdruck­verhalten (insbesondere auf Naturpapier), Veredelungs­möglichkeiten durch ein eingebautes Lackwerk und vieles mehr! Ganz nebenbei bietet die Komori auch ökologische Vorteile. Mehr erfahren Sie unter Bogenoffset.'
-  },
-  {
-    date: '24. Dezember 2023',
-    title: 'Fröhliche Weihnachten',
-    description: 'Wir wünschen allen ein frohes Weihnachtsfest und einen guten Rutsch ins neue Jahr 2024. Ab dem 3. Januar 2024 sind wir wieder für Sie da.'
-  }
-  ,
-  {
-    date: '18. Juni 2023',
-    title: 'Digitaldruck auf höchstem Niveau!',
-    description: 'Mit der HP Indigo 12000 HD bieten wir brillante Druckqualität und höchste Flexibilität. Beeindruckende Details, lebendige Farben und vielfältige Materialoptionen machen sie zur perfekten Wahl für individuelle und hochwertige Druckprodukte. Entdecken Sie modernste Technologie und profitieren Sie von schneller Produktion und nachhaltigen Vorteilen!'
-  }
-]
+  newsData = [
+    {
+      date: '16. Mai 2024',
+      title: 'Ökostrom',
+      description: 'Die firmeneigene Photovoltaikanlage auf dem Dach unserer Produktionshalle erzeugt jährlich 190.000 kWh und deckt damit ein Viertel unseres Gesamtverbrauchs. Den übrigen Bedarf decken wir durch 100% Ökostrom unseres örtlichen Versorgers.'
+    },
+    {
+      date: '20. April 2024',
+      title: 'Wir Suchen',
+      description: 'Fest: Medientechnolge Druck Ausbildung: Medientechnologe Druck Fest: Medientechnologe Druckverarbeitung Ausbildung: Medientechnologe Druckverarbeitung Aushilfen für die Weiterverarbeitung! Eine ausführliche Beschreibung finden Sie weiter unten unter der Rubrik »JOBS«!'
+    },
+    {
+      date: '2. März 2024',
+      title: 'Schneller, flexibler, rentabler – die Bogenoffset-Druckmaschine',
+      description: 'Die KOMORI LITHRONE GL-840P ist das Herzstück unseres Maschinenparks. Mit ihr bieten wir unseren Kunden nun noch hoch­wertigeren Service. Freuen Sie sich auf verkürzte Druckzeiten, besseres Ausdruck­verhalten (insbesondere auf Naturpapier), Veredelungs­möglichkeiten durch ein eingebautes Lackwerk und vieles mehr! Ganz nebenbei bietet die Komori auch ökologische Vorteile. Mehr erfahren Sie unter Bogenoffset.'
+    },
+    {
+      date: '24. Dezember 2023',
+      title: 'Fröhliche Weihnachten',
+      description: 'Wir wünschen allen ein frohes Weihnachtsfest und einen guten Rutsch ins neue Jahr 2024. Ab dem 3. Januar 2024 sind wir wieder für Sie da.'
+    }
+    ,
+    {
+      date: '18. Juni 2023',
+      title: 'Digitaldruck auf höchstem Niveau!',
+      description: 'Mit der HP Indigo 12000 HD bieten wir brillante Druckqualität und höchste Flexibilität. Beeindruckende Details, lebendige Farben und vielfältige Materialoptionen machen sie zur perfekten Wahl für individuelle und hochwertige Druckprodukte. Entdecken Sie modernste Technologie und profitieren Sie von schneller Produktion und nachhaltigen Vorteilen!'
+    }
+  ]
 
 
   offeringsData = [
@@ -162,6 +157,7 @@ newsData = [
       mainDescription: 'Der Bogenoffsetdruck bietet optimale Druckqualität für unterschiedlichste Produkte – von Akzidenzen wie Visitenkarten, Briefbögen und Broschüren bis hin zu umfangreichen Geschäftsberichten und Büchern. Besonders für höhere Auflagen empfiehlt sich diese schnelle, flexible und rentable Druckmethode.',
       sliderArray: [
         './assets/img/leistungen-bogenoffset-slider-01.jpg',
+        './assets/img/leistungen-bogenoffset-slider-02.jpg',
         './assets/img/leistungen-bogenoffset-slider-03.jpg',
         './assets/img/leistungen-bogenoffset-slider-04.jpg'
       ],

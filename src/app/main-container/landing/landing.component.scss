@@ -1,8 +1,9 @@
 @import './../../../styles.scss';
 
 :host {
-    height: calc(100vh - 81px);
+    // height: calc(100vh - 81px);
     display: block;
+    padding-top: 81px;
 }
 
 .slider-img {
@@ -24,9 +25,8 @@
     @include display();
     flex-direction: column;
     background-color: $color-blue-transparancy;
-    // width: 100%;
     color: $color-white;
-    margin-top: -225px;
+    margin-top: -320px;
     position: relative;
     margin-left: -40px;
     margin-right: -40px;

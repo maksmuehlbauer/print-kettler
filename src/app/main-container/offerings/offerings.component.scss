@@ -13,7 +13,7 @@
     flex-direction: column;
     position: relative;
     &:hover p, img, div {
-        cursor: pointer;
+        // cursor: pointer;
         color: $color-blue
     }
     img {

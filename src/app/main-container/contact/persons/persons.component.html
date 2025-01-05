@@ -1,7 +1,7 @@
 <div class="flex-center">
     <div class="desk-max-width">
         <div class="content-box">
-            <h2>
+            <h2 class="mb-32">
                 Ihre Ansprechpartner<br><span class="f-bold">Bei der Druckerei Kettler:</span>
             </h2>
             
@@ -18,7 +18,7 @@
                                 <li *ngIf="person.titleTwo">{{ person.titleTwo}}</li>
                                 <li *ngIf="person.titleThree">{{ person.titleThree}}</li>
                                 <li class="mt-8">{{ person.phone }}</li>
-                                <a href="#">{{ person.email }}</a>
+                                <a href="mailto:info@druckerei-kettler.de">{{ person.email }}</a>
                             </ul>
                         </div>
                     </div>
