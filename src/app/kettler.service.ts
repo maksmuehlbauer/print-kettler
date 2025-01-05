@@ -229,5 +229,22 @@ newsData = [
     return this.underCategoryData.digitalPrintData;
   }
 
+  categorys = [
+    {
+      img: './assets/img/offset.png',
+      title: 'Bogenoffset',
+      description: 'Brillante Qualität für Druckerzeugnisse in hohen Auflagen und verschiedensten Formaten – vom Flyer bis zum Plakat. Jetzt noch schneller und rentabler.',
+      route: 'sheetfedoffset'
+    },
+    {
+      img: './assets/img/digital.png',
+      title: 'Digitaldruck',
+      description: 'Personalisierte Druckmedien und kleine Auflagen zum echten Vorteils-Preis, in einer Qualität, die sich vor dem Bogenoffsetdruck nicht verstecken muss.',
+      route: 'digitalprint'
+    }
+  ]
+
 
 }
+
+

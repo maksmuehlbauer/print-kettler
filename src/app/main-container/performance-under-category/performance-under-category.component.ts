@@ -17,24 +17,25 @@ export class PerformanceUnderCategoryComponent implements OnInit {
   ) {}
 
   catData: any;
-
+  currentIndex: number = 0
   ucData = inject(KettlerService)
+
 
   ngOnInit() {
     this.startSlider();
     this.getRouteParameter();
   }
 
+
   getRouteParameter() {
     this.route.params.subscribe(params => {
       const type = params['type'];
       this.loadData(type);
-    });
+    }); 
   }
 
+
   loadData(type: string) {
-    // Hol dir die Daten aus deinem Service
-    // und filtere dort, was du brauchst
     if (type === 'sheetfedoffset') {
       this.catData = this.ucData.getSheedFedOffsetData();
     } else if (type === 'digitalprint') {
@@ -42,13 +43,13 @@ export class PerformanceUnderCategoryComponent implements OnInit {
     }
   }
 
-  currentIndex: number = 0
 
   startSlider() {
     setInterval(() => {
       this.currentIndex = (this.currentIndex + 1) % this.ucData.underCategoryData.sheetFedOffsetData.sliderArray.length;
     }, 3000);
   }
+  
 
   showImageIndex(i: number) {
     this.currentIndex = i

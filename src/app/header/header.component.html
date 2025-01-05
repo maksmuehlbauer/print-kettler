@@ -1,8 +1,7 @@
 <header>
     <img src="./assets/img/comp-logo.png" class="img-logo pr-32" alt="logo">
-        <a href="#" 
-        (mouseenter)="performanceHover = true" 
-        (mouseleave)="performanceHover = false">Leistungen
+        <div (mouseenter)="performanceHover = true" (mouseleave)="performanceHover = false" class="performance-box">
+            <a routerLink="/performance" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Leistungen</a>
             <div *ngIf="performanceHover" class="performance-hover-box">
                 <a [routerLink]="['/sub', 'sheetfedoffset']" class="card pl-32">
                     <h4 class="pb-8">Bogenoffset</h4>
@@ -13,7 +12,7 @@
                     <p class="hover-box-p">Personalisierte Druckmedien und kleine Auflagen schnell und zum Vorteils-Preis.</p>
                 </a>
             </div>
-        </a>
+        </div>
 
 
         <a href="/service" routerLink="/service" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Service</a>

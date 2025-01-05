@@ -1,0 +1,21 @@
+<img src="./assets/img/performance-banner.jpg" class="slider-img" alt="slider01">
+
+<div class="flex-center">
+    <div class="desk-max-width">
+        <div class="main-content-box">
+            <h1>Der Erfahrene<br> Partner für perfekte<br> Ergebnisse</h1>
+            <p class="f-size-36">Erhalten Sie alle Leistungen für eine<br> 
+                erfolgreiche Projektabwicklung aus nur<br> 
+                einer Hand. Hier erfahren Sie mehr über<br>
+                 unsere Kompetenzen.</p>
+        </div>
+        <div class="category-box">
+            <div *ngFor="let card of categoryData.categorys; let i = index" class="card mt-64"
+            [routerLink]="['/sub', card.route]">
+                <img src="{{ card.img }}" alt="">
+                <h3 class="mt-16 mb-16">{{ card.title }}</h3>
+                <p>{{ card.description }}</p>
+            </div>
+        </div>
+    </div>
+</div>
