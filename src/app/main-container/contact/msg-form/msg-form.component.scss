@@ -116,3 +116,7 @@ textarea {
     display: flex;
     align-self: flex-end;
 }
+
+.input-box {
+    @include display();
+}

@@ -16,17 +16,30 @@
                     <li><a href="mailto:info@druckerei-kettler.de">INFO&#64;DRUCKEREI-KETTLER.DE</a></li>
                 </ul>
             </div>
-            <form>
-                <input type="text" name="name" id="" placeholder="Name *" required>
-                <input type="email" name="mail" id="" placeholder="E-Mail *" required>
-                <input type="text" name="Betreff" id="" placeholder="Betreff">
-                <textarea name="message" id="" placeholder="Nachricht..."></textarea>
+            <form (ngSubmit)="onSubmit(contactForm, $event)" #contactForm="ngForm">
+                <div class="input-box">
+                    <input #name="ngModel" [(ngModel)]="contactData.name" type="text" name="name" placeholder="Name *" minlength="2" required>
+
+                    @if (name.dirty) {
+                        <div *ngIf="name.errors?.['required']">name is required
+                            <img src="./assets/img/contact-err.png" alt="">
+                        </div>
+                        <div *ngIf="name.errors?.['minlength']">min 2 values is required
+                            <img src="./assets/img/contact-err.png" alt="">
+                        </div>
+                        <img *ngIf="name.valid" src="./assets/img/contact-check.png" alt="">
+                    }
+                </div>
+
+                <input [(ngModel)]="contactData.mail" type="email" name="mail" id="" placeholder="E-Mail *" required>
+                <input [(ngModel)]="contactData.subject" type="text" name="Betreff" id="" placeholder="Betreff">
+                <textarea [(ngModel)]="contactData.message" name="message" id="" placeholder="Nachricht..."></textarea>
                 <div>
                     <input type="checkbox" required> 
                     <span class="text-checkbox f-size-15">Ich habe die <a href="">Datenschutzrechtliche Einwilligungserklärung</a> gelesen.*</span>
                 </div>
                 <div class="flex-right mt-32">
-                    <a href="#" class="f-size-15 submit-btn"><img src="./assets/img/arrow-white.png" alt="">Absenden</a>
+                    <button class="f-size-15 submit-btn"><img src="./assets/img/arrow-white.png" alt="">Absenden</button>
                 </div>
             </form>
         </div>
