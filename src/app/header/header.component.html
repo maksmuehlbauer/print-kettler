@@ -5,7 +5,7 @@
             (mouseleave)="performanceHover = false" 
             class="performance-box"
             >
-            <a routerLink="/performance" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"   [ngClass]="{ 'highlight': isPerformanceActive() || performanceHover }">Leistungen</a>
+            <a routerLink="/performance" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" [ngClass]="{ 'highlight': isPerformanceActive() || performanceHover }">Leistungen</a>
             <div *ngIf="performanceHover" class="performance-hover-box">
                 <a [routerLink]="['/sub', 'sheetfedoffset']" class="card pl-32">
                     <h4 class="pb-8">Bogenoffset</h4>

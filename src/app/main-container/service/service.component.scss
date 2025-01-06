@@ -60,6 +60,7 @@ a {
     text-decoration: underline;
     padding-bottom: 8px;
     &:hover {
+        cursor: pointer;
         color: $color-blue-hover;
     }
 }

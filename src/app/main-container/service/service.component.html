@@ -74,12 +74,12 @@
             <div class="index-box">
                 <h2>Überblick</h2>
                 <a href="contact">Ansprechpartner</a>
-                <a [routerLink]="[]" fragment="data">Dateiformat</a>
-                <a [routerLink]="[]" fragment="pdf">PDF-Erstellung</a>
-                <a [routerLink]="[]" fragment="resolution">Auflösung</a>
-                <a [routerLink]="[]" fragment="colors">Farben</a>
-                <a [routerLink]="[]" fragment="proof">Proof Formate</a>
-                <a [routerLink]="[]" fragment="next">Wie geht es weiter?</a>
+                <a (click)="scrollTo('data')">Dateiformat</a>
+                <a (click)="scrollTo('pdf')">PDF-Erstellung</a>
+                <a (click)="scrollTo('resolution')">Auflösung</a>
+                <a (click)="scrollTo('colors')">Farben</a>
+                <a (click)="scrollTo('proof')">Proof Formate</a>
+                <a (click)="scrollTo('next')">Wie geht es weiter?</a>
 
             </div>
             
