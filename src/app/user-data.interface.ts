@@ -3,4 +3,5 @@ export interface ContactDataInterface {
     mail: string;
     subject: string;
     message: string;
+    privacyPolicy: boolean;
 }

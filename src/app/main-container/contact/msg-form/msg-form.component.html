@@ -17,31 +17,89 @@
                 </ul>
             </div>
             <form (ngSubmit)="onSubmit(contactForm, $event)" #contactForm="ngForm">
-                <div class="input-box">
+                <div class="input-box  mb-8">
                     <input #name="ngModel" [(ngModel)]="contactData.name" type="text" name="name" placeholder="Name *" minlength="2" required>
-
-                    @if (name.dirty) {
-                        <div *ngIf="name.errors?.['required']">name is required
-                            <img src="./assets/img/contact-err.png" alt="">
-                        </div>
-                        <div *ngIf="name.errors?.['minlength']">min 2 values is required
-                            <img src="./assets/img/contact-err.png" alt="">
-                        </div>
-                        <img *ngIf="name.valid" src="./assets/img/contact-check.png" alt="">
-                    }
+                    <div class="status-box">
+                        @if (name.dirty) {
+                            <div class="icon-box">
+                                <img *ngIf="name.errors?.['required']" src="./assets/img/contact-err.png" alt="">
+                                <img *ngIf="name.errors?.['minlength']" src="./assets/img/contact-err.png" alt="">
+                                <img *ngIf="name.valid" src="./assets/img/contact-check.png" alt="">
+                            </div>
+                            <div class="err-msg-box">
+                                <span *ngIf="name.errors?.['required']">Name ist erforderlich</span>
+                                <span *ngIf="name.errors?.['minlength']">Der Name muss min 2 Zeichen enthalten</span>
+                            </div>
+                        }
+                    </div>
+                </div>                
+                <div class="input-box  mb-8">
+                    <input #mail="ngModel" [(ngModel)]="contactData.mail" type="text" name="mail" placeholder="E-Mail *" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
+                    <div class="status-box">
+                        @if (mail.dirty) {
+                            <div class="icon-box">
+                                <img *ngIf="mail.errors?.['required']" src="./assets/img/contact-err.png" alt="">
+                                <img *ngIf="mail.errors?.['pattern']" src="./assets/img/contact-err.png" alt="">
+                                <img *ngIf="mail.valid" src="./assets/img/contact-check.png" alt="">
+                            </div>
+                            <div class="err-msg-box">
+                                <span *ngIf="mail.errors?.['required']">E-Mail ist erforderlich</span>
+                                <span *ngIf="mail.errors?.['pattern']">Eine gültige E-Mail Adresse ist erforderlich</span>
+                            </div>
+                        }
+                    </div>
                 </div>
-
-                <input [(ngModel)]="contactData.mail" type="email" name="mail" id="" placeholder="E-Mail *" required>
-                <input [(ngModel)]="contactData.subject" type="text" name="Betreff" id="" placeholder="Betreff">
-                <textarea [(ngModel)]="contactData.message" name="message" id="" placeholder="Nachricht..."></textarea>
-                <div>
-                    <input type="checkbox" required> 
+                <div class="input-box  mb-8">
+                    <input #subject="ngModel" [(ngModel)]="contactData.subject" type="text" name="subject" placeholder="Betreff *" required>
+                    <div class="status-box">
+                        @if (subject.dirty) {
+                            <div class="icon-box">
+                                <img *ngIf="subject.errors?.['required']" src="./assets/img/contact-err.png" alt="">
+                                <img *ngIf="subject.valid" src="./assets/img/contact-check.png" alt="">
+                            </div>
+                            <div class="err-msg-box">
+                                <span *ngIf="subject.errors?.['required']">Betreff ist erforderlich</span>
+                            </div>
+                        }
+                    </div>
+                </div>
+                <div class="input-box  mb-8">
+                    <textarea #message="ngModel" [(ngModel)]="contactData.message" name="message" id="" placeholder="Nachricht *" minlength="10" required></textarea>
+                    <div class="status-box">
+                        @if (message.dirty) {
+                            <div class="icon-box">
+                                <img *ngIf="message.errors?.['required']" src="./assets/img/contact-err.png" alt="">
+                                <img *ngIf="message.errors?.['minlength']" src="./assets/img/contact-err.png" alt="">
+                                <img *ngIf="message.valid" src="./assets/img/contact-check.png" alt="">
+                            </div>
+                            <div class="err-msg-box">
+                                <span *ngIf="message.errors?.['required']">Betreff ist erforderlich</span>
+                                <span *ngIf="message.errors?.['minlength']">Gib eine Nachricht von min. 10 Zeichen ein.</span>
+                            </div>
+                        }
+                    </div>
+                </div>
+                
+                <div class="input-box  mb-8">
+                    <input #privacy="ngModel" [(ngModel)]="contactData.privacyPolicy" name="privacyPolicy" type="checkbox" required> 
                     <span class="text-checkbox f-size-15">Ich habe die <a href="">Datenschutzrechtliche Einwilligungserklärung</a> gelesen.*</span>
+                    <div class="status-box">
+                        <div class="err-msg-box">
+                            <span *ngIf="privacy.invalid && (privacy.touched || privacy.dirty)">Datenschutz Hinweis muss akzeptiert werden.</span>
+                        </div>
+                    </div>
                 </div>
                 <div class="flex-right mt-32">
-                    <button class="f-size-15 submit-btn"><img src="./assets/img/arrow-white.png" alt="">Absenden</button>
+                    <button class="f-size-15 submit-btn" [class.btn-disabled]="contactForm.form.invalid">
+                        <img src="./assets/img/arrow-white.png" alt="">Absenden
+                    </button>
                 </div>
             </form>
         </div>
     </div>
+</div>
+<div *ngIf="transmitMessage" class="msg-feedback-box">
+    <h3>
+        Nachricht erfolgreich gesendet!
+    </h3>
 </div>

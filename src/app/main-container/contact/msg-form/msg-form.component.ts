@@ -12,20 +12,30 @@ import { ContactDataInterface } from '../../../user-data.interface';
 })
 export class MsgFormComponent {
 
-
+  transmitMessage: boolean = false;
 
   contactData:ContactDataInterface = {
     name: "",
     mail: "",
     subject: "",
     message: "",
+    privacyPolicy: false
   }
 
   onSubmit(ngForm: NgForm, event: Event) {
     if (ngForm.submitted && ngForm.form.valid) {
-      event.preventDefault();
-      console.log(this.contactData)
+      this.showFeedbackMessage();
+      ngForm.reset();
     }
   }
+
+  showFeedbackMessage() {
+    this.transmitMessage = true;
+    setTimeout(() => {
+      this.transmitMessage = false
+    }, 5000);
+  }
+
+
 
 }
