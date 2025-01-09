@@ -17,12 +17,11 @@ h2 {
 }
 
 .person-card {
-    // background-color: yellow;
     position: relative;
-    // overflow: hidden;
+    height: 219px;
+    overflow: hidden;
     img {
         width: 100%;
-        // height: 100%;
         object-fit: cover;
         
     }
@@ -30,7 +29,10 @@ h2 {
 }
 
 .person-information {
-    display:none;
+    // display:none;
+    opacity: 0;
+    transition: opacity 250ms ease-in-out;
+    height: 100%;
 }
 
 .person-card:hover .person-information {
@@ -40,12 +42,12 @@ h2 {
     left: 0;
     right: 0;
     bottom: 4px;
-    background-color: $color-blue-transparancy
+    background-color: $color-blue-transparancy;
+    opacity: 1;
+
+
 }
 
-.d-none {
-    display: flex;
-}
 
 ul {
     padding: 0 0 8px 24px;

@@ -13,7 +13,5 @@ export class PersonsComponent {
 
 contactPersons = inject(KettlerService)
 
-hoveredIndex: number | null = null;
-
 
 }

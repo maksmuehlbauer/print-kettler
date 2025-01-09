@@ -7,7 +7,11 @@
                     <p class="f-size-15">{{ catData.mainDescription }}</p>
                 </div>
                 <div class="slider-box">
-                    <img [src]="catData.sliderArray[currentIndex]" alt="">
+                    <img *ngFor="let img of catData.sliderArray; let i = index" 
+                     [src]="img" 
+                     class="slider-img"
+                     [class.active]="i === currentIndex"
+                     alt="">
                     <div class="slider-control mt-8">
                         <div *ngFor="let circle of catData.sliderArray; let i = index" 
                         class="circle"
@@ -17,7 +21,6 @@
                         <!-- empty div -->
                         </div>
                     </div>
-
                 </div>
             </div>
             <div class="bottom-content mt-96">

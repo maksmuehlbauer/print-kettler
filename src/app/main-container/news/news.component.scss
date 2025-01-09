@@ -28,6 +28,7 @@
     @include display($ai: flex-start, $jc: flex-start);
     gap: 24px;
     overflow: hidden;
+    height: 320px;
 }
 
 
@@ -36,6 +37,7 @@
     display: flex;
     flex: 0 0 33%;
     flex-direction: column;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
     >.date {
         color: $color-blue;
         font-family: 'SimLight';
@@ -48,5 +50,35 @@
     }
     p {
         line-height: 24px;
+    }
+    &.slide-in {
+        animation: slideIn 0.5s forwards;
+    }
+
+    &.slide-out {
+        animation: slideOut 0.5s forwards;
+    }
+}
+
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(-100%);
+        opacity: 0;
     }
 }

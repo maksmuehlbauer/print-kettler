@@ -6,12 +6,26 @@
     padding-top: 81px;
 }
 
-.slider-img {
+.slider-box {
+    position: relative;
     width: 100%;
-    height: 600px; // Höhe des Sliders
-    object-fit: cover;
+    height: 600px;
+    overflow: hidden;
+    .slider-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 600px;
+        object-fit: cover;
+        opacity: 0;
+        transition: opacity 1.5s ease-in-out;
+    }
+    .slider-img.active {
+        opacity: 1;
+        z-index: 1;
+      }
 }
-
 
 .eye-catcher-img {
     top: -150px;
@@ -30,6 +44,7 @@
     position: relative;
     margin-left: -40px;
     margin-right: -40px;
+    z-index: 10;
 }
 
 p {

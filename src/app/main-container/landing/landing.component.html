@@ -1,4 +1,12 @@
-<img src="{{ sliderArray[currentIndex] }}" class="slider-img" alt="slider01">
+<div class="slider-box">
+    <!-- <img src="{{ sliderArray[currentIndex] }}" class="slider-img" alt="slider01"> -->
+     <img *ngFor="let img of sliderArray; let i = index" 
+        [src]="img"
+        class="slider-img"
+        [class.active]="i === currentIndex"
+        alt="slider-image">
+</div>
+
 
 <div class="flex-center">
     <div class="desk-max-width">

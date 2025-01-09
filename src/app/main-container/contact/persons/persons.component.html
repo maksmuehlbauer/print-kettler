@@ -8,10 +8,10 @@
             <div class="persons-box">
                     <div class="person-card" 
                     *ngFor ="let person of contactPersons.contactPersonData; let i = index"
-                    (mouseenter)="hoveredIndex = i" 
-                    (mouseleave)="hoveredIndex = null">
+
+                    >
                         <img src="{{ person.img }}" alt="{{ person.name }}">
-                        <div class="person-information" [class.d-none]="hoveredIndex === i">
+                        <div class="person-information">
                             <ul>
                                 <li>{{ person.name }}</li>
                                 <li>{{ person.titleOne}}</li>

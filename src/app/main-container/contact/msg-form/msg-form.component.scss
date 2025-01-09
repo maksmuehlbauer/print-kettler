@@ -175,14 +175,32 @@ textarea {
         color:$color-white;
         text-transform: uppercase;
         font-family: "SimLight";
+        animation: fadeInOutH3 5s ease-in-out forwards;
     
     }
 }
 
+
 @keyframes fadeInOut {
     0% {
         opacity: 0;
-        transform: translateY(20px);
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+@keyframes fadeInOutH3 {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
     }
     10% {
         opacity: 1;
@@ -194,7 +212,7 @@ textarea {
     }
     100% {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(30px);
     }
 }
 

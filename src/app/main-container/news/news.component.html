@@ -16,7 +16,7 @@
             </div>
             <div class="news-container mt-32">
                 @for(news of newsServiceData.newsData | slice:startIndex:startIndex+itemsPerPage; track news.date) {
-                    <div class="news-card">
+                    <div class="news-card animated" [class.slide-in]="animationState === 'in'" [class.slide-out]="animationState === 'out'">
                         <!-- {{ $index + 1 }} -->
                         <span class="date mb-16 f-size-15">{{ news.date }}</span>
                         <span class="title mb-16 f-size-15">{{ news.title }}</span>
