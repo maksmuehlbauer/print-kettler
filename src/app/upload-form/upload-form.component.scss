@@ -90,12 +90,13 @@ input, textarea {
 }
 
 .text-container {
-    height: 172px !important;
+    height: 186px !important;
 }
 
 textarea {
-    height: 172px !important;
+    height: 164px !important;
     padding: 12px 0 0 8px;
+    resize: none;
 }
 
 
@@ -231,3 +232,28 @@ textarea {
         cursor: pointer;
     }
 }
+
+.upload-progress {
+    width: 80%;
+    @include display();
+    flex-direction: column;
+    h2 {
+        color: $color-white;
+    }
+}
+
+.progress-bar-container {
+    width: 100%;
+    height: 20px;
+    background-color: #e0e0e0; /* Hintergrundfarbe des Balkens */
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 16px;
+  }
+  
+  .progress-bar {
+    height: 100%;
+    background-color: #40c4ff; /* Farbe des Fortschrittsbalkens */
+    width: 0%; /* Initial auf 0% */
+    transition: width 0.3s ease; /* Sanfter Übergang */
+  }

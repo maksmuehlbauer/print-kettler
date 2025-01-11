@@ -2,7 +2,7 @@
     <div class="upload-box">
         <img src="./assets/img/close.png" alt="close" (click)="closeUplaodWindow()">
         <h1>Daten-Upload</h1>
-        <form (ngSubmit)="onSubmit(uploadForm, $event)" #uploadForm="ngForm">
+        <form (ngSubmit)="onSubmit(uploadForm, $event)" #uploadForm="ngForm" *ngIf="!uploadInProgress">
             <div class="input-box">
                 <div class="input-card">
                     <h4 class="mb-16">1. Projektdetails</h4>
@@ -113,6 +113,16 @@
             </div>
 
         </form>
+        <div class="upload-progress" *ngIf="uploadInProgress">
+
+            <!-- <h2>Progress: {{ uploadProgress }} %</h2> -->
+            <h2>{{ uploadProgress < 100 ? 'Progress: ' + uploadProgress + '%' : 'Upload Complete' }}</h2>
+
+            <div class="progress-bar-container">
+                <div class="progress-bar" [style.width.%]="uploadProgress"></div>
+            </div>
+            
+        </div>
     </div>
 </div>
 

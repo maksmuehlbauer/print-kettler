@@ -2,11 +2,12 @@ import { Component, EventEmitter, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { UploadDataInterface } from '../user-data.interface';
 import { FormsModule, NgForm } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-upload-form',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, RouterModule],
   templateUrl: './upload-form.component.html',
   styleUrl: './upload-form.component.scss'
 })
@@ -14,7 +15,10 @@ export class UploadFormComponent {
   @Output() closeDialog = new EventEmitter<void>();
 
   hovered: boolean = false;
-  files: File[] = []; // Hochgeladene Dateien
+  files: File[] = [];
+  uploadInProgress: boolean = false;
+  uploadProgress = 0;
+
 
   uploadData: UploadDataInterface = {
     projekt: "",
@@ -28,14 +32,23 @@ export class UploadFormComponent {
 
   onSubmit(ngForm: NgForm, event: Event) {
     event.preventDefault();
-    console.log(this.uploadData)
     if (ngForm.submitted && ngForm.form.valid) {
-      
-      console.log(this.uploadData)
-
-      // this.showFeedbackMessage();
+      this.startUpload();
+      // console.log(this.uploadData)
       // ngForm.reset();
     }
+  }
+
+  startUpload() {
+    this.uploadInProgress = true;
+    this.uploadProgress = 0;
+    const interval = setInterval(() => {
+      if (this.uploadProgress < 100) {
+        this.uploadProgress += 10;
+      } else {
+        clearInterval(interval);
+      }
+    }, 500);
   }
 
   deleteFileIndex(i:number, event:Event) {
@@ -55,7 +68,7 @@ export class UploadFormComponent {
   }
 
   onDragOver(event: DragEvent): void {
-    event.preventDefault(); // Verhindert das Standardverhalten
+    event.preventDefault();
     event.stopPropagation();
     (event.target as HTMLElement).classList.add('dragging');
   }
