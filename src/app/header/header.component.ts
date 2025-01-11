@@ -12,7 +12,7 @@ import { RouterModule, Router } from '@angular/router';
 })
 export class HeaderComponent {
 
-  uplaodDialogOpen: boolean = false;
+  uplaodDialogOpen: boolean = true;
   performanceHover = false;
 
   constructor(private router: Router) {

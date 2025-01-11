@@ -5,3 +5,14 @@ export interface ContactDataInterface {
     message: string;
     privacyPolicy: boolean;
 }
+
+
+export interface UploadDataInterface {
+    projekt: string;
+    name: string;
+    mail: string;
+    contactPerson: string;
+    phone: string;
+    message: string;
+    privacyPolicy: boolean;
+}

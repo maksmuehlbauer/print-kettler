@@ -2,27 +2,69 @@
     <div class="upload-box">
         <img src="./assets/img/close.png" alt="close" (click)="closeUplaodWindow()">
         <h1>Daten-Upload</h1>
-        <form>
+        <form (ngSubmit)="onSubmit(uploadForm, $event)" #uploadForm="ngForm">
             <div class="input-box">
                 <div class="input-card">
                     <h4 class="mb-16">1. Projektdetails</h4>
                     <div class="row-1">
-                        <input type="text" id="projectTitle" name="projectTitle" placeholder="Projekttitel / Angebots-Nr." />
-
+                        <div class="input-container">
+                            <input #project="ngModel" [(ngModel)]="uploadData.projekt" minlength="5" type="text" id="projectTitle" name="projectTitle" placeholder="Projekttitel / Angebots-Nr. *" required/>
+                            @if (project.dirty) {
+                                <div class="err-msg-box">
+                                    <span *ngIf="project.errors?.['minlength']">Bitte min. 5 Zeichen eingeben</span>
+                                    <img *ngIf="project.valid" src="./assets/img/upload-check.png" alt="check-valid">
+                                </div>
+                            }
+                        </div>
                     </div>
                     <div class="row-2">
-                        <input type="text" id="clientName" name="clientName" placeholder="Name des Auftraggebers" />
-                        <input type="email" id="emailAddress" name="emailAddress" placeholder="example@domain.com" />
+                        <div class="input-container">
+                            <input #name="ngModel" [(ngModel)]="uploadData.name" type="text" id="clientName" name="clientName" placeholder="Name des Auftraggebers *" minlength="2" required/>
+                            @if (name.dirty) {
+                                <div class="err-msg-box">
+                                    <span *ngIf="name.errors?.['minlength']">min. 2 Zeichen</span>
+                                    <img *ngIf="name.valid" src="./assets/img/upload-check.png" alt="check-valid">
+                                </div>
+                            }
+                        </div>
+                        <div class="input-container">
+                            <input #mail="ngModel" [(ngModel)]="uploadData.mail" type="mail" id="Mail" name="Mail" placeholder="E-Mail Adresse *" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"/>
+                            @if (mail.dirty) {
+                                <div class="err-msg-box">
+                                    <span *ngIf="mail.errors?.['pattern']">gültige Mail Adresse</span>
+                                    <img *ngIf="mail.valid" src="./assets/img/upload-check.png" alt="check-valid">
+                                </div>
+                            }
+                        </div>
+
                     </div>
                     <div class="row-3">
-                        <input type="text" id="contactPerson" name="contactPerson" placeholder="Ansprechpartner" />
-                        <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="z.B. +49 123 4567890" />
+                        <div class="input-container">
+                            <input type="text" id="contactPerson" name="contactPerson" placeholder="Ansprechpartner" />
+                        </div>
+
+                        <div class="input-container">
+                            <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="z.B. +49 123 4567890" />
+                        </div>
                     </div>
                     <div class="row-4">
-                        <textarea id="additionalInfo" name="additionalInfo" rows="4" placeholder="Weitere Informationen eingeben..."></textarea>
+                        <div class="text-container">
+                            <textarea #message="ngModel" [(ngModel)]="uploadData.message" id="additionalInfo" name="additionalInfo" rows="4" placeholder="Weitere Informationen eingeben... *" minlength="10" required></textarea>
+                            @if (message.dirty) {
+                                <div class="err-msg-box">
+                                    <span *ngIf="message.errors?.['minlength']">Die Nachricht muss min. 10 Zeichen enthalten.</span>
+                                    <img *ngIf="message.valid" src="./assets/img/upload-check.png" alt="check-valid">
+                                </div>
+                            }
+                        </div>
                     </div>
 
                 </div>
+
+
+
+
+
                 <div class="input-card">
                     <h4 class="mb-16">2. Druckdaten</h4>
                     <div 
@@ -32,7 +74,7 @@
                     (drop)="onDrop($event)"
                     (click)="fileInput.click()"
                   >
-                  Drag & Drop<br> oder<br> Klick
+                  <span *ngIf="files.length < 1">Drag & Drop<br> oder<br> Klick</span>
 
                   <input 
                       type="file" 
@@ -42,8 +84,8 @@
                       hidden 
                     />
                     <div class="preview">
-                        <div *ngFor="let file of files">
-                            <img src="./assets/img/close.png" alt="close"> 
+                        <div *ngFor="let file of files; let i = index">
+                            <img src="./assets/img/close.png" alt="close" (click)="deleteFileIndex(i, $event)"> 
                             {{ file.name }}
                         </div>
                           
@@ -55,7 +97,7 @@
             </div>
             <div class="info-box mt-16">
                 <div class="description f-size-15">
-                    <input type="checkbox"> Ich habe die <a href="">Datenschutzrechtliche Einwilligungserklärung</a> gelesen.*<br>
+                    <input #privacy="ngModel" [(ngModel)]="uploadData.privacyPolicy" type="checkbox" name="privacyPolicy" required> Ich habe die <a href="">Datenschutzrechtliche Einwilligungserklärung</a> gelesen.*<br><br>
                     *Pflichtfeld
 
                     <h4 class="mt-32 mb-16">Haben Sie Fragen zur Datenübertragung?</h4>
@@ -63,9 +105,10 @@
                 </div>
                 <div class="submit-data-box">
                     Erlaubte Datentypen: <span class="f-weight">pdf, rar, zip, jpg, tif (max. 1.000 MB)</span>
-                    <a href="" class="submit-btn" (mouseenter)="hovered = true" (mouseleave)="hovered = false">
-                        <img [src]="hovered ? './assets/img/arrow-white.png' : './assets/img/arrow-right-blue.png'" class="img-upload" alt="">Daten-upload
-                    </a>
+                    <button class="submit-btn" [class.submit-btn-dis]="uploadForm.form.invalid" (mouseenter)="hovered = true" (mouseleave)="hovered = false" required>
+                        <img [src]="uploadForm.valid && hovered ? './assets/img/arrow-white.png' : './assets/img/arrow-right-blue.png'" 
+                        class="img-upload">Daten-upload
+                    </button>
                 </div>
             </div>
 
