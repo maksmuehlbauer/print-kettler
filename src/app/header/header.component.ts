@@ -12,11 +12,10 @@ import { RouterModule, Router } from '@angular/router';
 })
 export class HeaderComponent {
 
-  uplaodDialogOpen: boolean = true;
+  uplaodDialogOpen: boolean = false;
   performanceHover = false;
 
   constructor(private router: Router) {
-
   }
 
   isPerformanceActive(): boolean {

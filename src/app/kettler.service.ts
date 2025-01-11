@@ -13,7 +13,7 @@ export class KettlerService {
       name: "Gunnar Kettler",
       titleOne: "Geschäftsführung",
       phone: "02383 910 13-13",
-      email: "info@druckerei-kettler.de",
+      email: "g.kettler@druckerei-kettler.de",
       img: "./assets/img/gunnar_kettler.jpg"
     },
     {
@@ -21,7 +21,7 @@ export class KettlerService {
       titleOne: "Assistenz der Geschäftsführung",
       titleTwo: "Prokurist",
       phone: "02383 910 13-25",
-      email: "info@druckerei-kettler.de",
+      email: "m.prang@druckerei-kettler.de",
       img: "./assets/img/marvin_prang.jpg"
     },
     {
@@ -30,7 +30,7 @@ export class KettlerService {
       titleTwo: "Auftragsabwicklung",
       titleThree: "Web to Print",
       phone: "02383 910 13-10",
-      email: "info@druckerei-kettler.de",
+      email: "m.muehlbauer@druckerei-kettler.de",
       img: "./assets/img/max_muehlbauer.jpeg"
     },
     {
@@ -38,21 +38,21 @@ export class KettlerService {
       titleOne: "Kundenbetreuung",
       titleTwo: "Auftragsabwicklung",
       phone: "02383 910 13-30",
-      email: "info@druckerei-kettler.de",
+      email: "j.schulze@druckerei-kettler.de",
       img: "./assets/img/jens_schulze.jpg"
     },
     {
       name: "Nicole Hucke",
       titleOne: "Buchhaltung",
       phone: "02383 910 13-18",
-      email: "info@druckerei-kettler.de",
+      email: "n.hucke@druckerei-kettler.de",
       img: "./assets/img/nicole-hucke.jpg"
     },
     {
       name: "Corinna Beutel",
       titleOne: "Buchhaltung",
       phone: "02383 910 13-17",
-      email: "info@druckerei-kettler.de",
+      email: "c.beutel@druckerei-kettler.de",
       img: "./assets/img/corinna_beutel.jpg"
     },
     {
@@ -60,7 +60,7 @@ export class KettlerService {
       titleOne: "Kundenbetreuung",
       titleTwo: "Auftragsabwicklung",
       phone: "02383 910 13-38",
-      email: "info@druckerei-kettler.de",
+      email: "j.sandhoff@druckerei-kettler.de",
       img: "./assets/img/jonas_sandhoff.jpg"
     },
     {
@@ -68,35 +68,35 @@ export class KettlerService {
       titleOne: "Grafik",
       titleTwo: "Design",
       phone: "02383 910 13-34",
-      email: "info@druckerei-kettler.de",
+      email: "a.kettler@druckerei-kettler.de",
       img: "./assets/img/anne_kettler.jpg"
     },
     {
       name: "Uwe Klein",
       titleOne: "Druckvorstufe",
       phone: "02383 910 13-12",
-      email: "info@druckerei-kettler.de",
+      email: "ctp@druckerei-kettler.de",
       img: "./assets/img/uwe-klein.jpg"
     },
     {
       name: "Christiane Buchholz",
       titleOne: "Druckvorstufe",
       phone: "02383 910 13-12",
-      email: "info@druckerei-kettler.de",
+      email: "ctp@druckerei-kettler.de",
       img: "./assets/img/christiane-buchholz.jpg"
     },
     {
       name: "Kevin Kretzer",
       titleOne: "Digitaldruck",
       phone: "02383 910 13-24",
-      email: "info@druckerei-kettler.de",
+      email: "k.kretzer@druckerei-kettler.de",
       img: "./assets/img/kevin_kretzer.jpg"
     },
     {
       name: "Jenifer Stürtz",
       titleOne: "Digitaldruck",
       phone: "02383 910 13-24",
-      email: "info@druckerei-kettler.de",
+      email: "j.stuertz@druckerei-kettler.de",
       img: "./assets/img/jenifer_stuertz.jpg"
     }
   ];

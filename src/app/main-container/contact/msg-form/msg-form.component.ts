@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { ContactDataInterface } from '../../../user-data.interface';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-msg-form',
   standalone: true,
-  imports: [FormsModule, CommonModule],
+  imports: [FormsModule, CommonModule, RouterModule],
   templateUrl: './msg-form.component.html',
   styleUrl: './msg-form.component.scss'
 })

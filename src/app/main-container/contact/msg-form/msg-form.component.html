@@ -82,7 +82,7 @@
                 
                 <div class="input-box  mb-8">
                     <input #privacy="ngModel" [(ngModel)]="contactData.privacyPolicy" name="privacyPolicy" type="checkbox" required> 
-                    <span class="text-checkbox f-size-15">Ich habe die <a href="">Datenschutzrechtliche Einwilligungserklärung</a> gelesen.*</span>
+                    <span class="text-checkbox f-size-15">Ich habe die <a routerLink="/privacypolicy">Datenschutzrechtliche Einwilligungserklärung</a> gelesen.*</span>
                     <div class="status-box">
                         <div class="err-msg-box">
                             <span *ngIf="privacy.invalid && (privacy.touched || privacy.dirty)">Datenschutz Hinweis muss akzeptiert werden.</span>
