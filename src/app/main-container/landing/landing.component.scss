@@ -53,3 +53,31 @@ p {
     margin-top: 0;
     margin-bottom: 80px;
 }
+
+
+@media (max-width: 1400px) {
+    .eye-catcher-img {
+        top: -200px;
+        left: 0;
+    }
+}
+
+
+@media (max-width: 1200px) {
+    .main-content-box {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .eye-catcher-img {
+        top: -132px;
+        width: 224px;
+    }
+}
+
+@media (max-width: 1080px) {
+    .eye-catcher-img {
+        top: -156px;
+        width: 224px;
+    }
+}

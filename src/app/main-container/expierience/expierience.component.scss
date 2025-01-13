@@ -35,5 +35,18 @@ p {
 
 .txt-align {
     text-align: center;
-    // @include display()
+}
+
+@media (max-width: 1200px) {
+    .main-content-box {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 950px) {
+    .main-content-box {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
 }

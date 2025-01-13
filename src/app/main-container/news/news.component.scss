@@ -82,3 +82,30 @@
         opacity: 0;
     }
 }
+
+@media (max-width:1080px) {
+    .news-card {
+        display: flex;
+        flex: 0 0 31%;
+    }
+}
+
+@media (max-width:950px) {
+    .main-content-box {
+        padding: 0 20px;
+    }
+}
+
+
+@media (max-width:768px) {
+    .main-content-box {
+        padding: 0 80px;
+        margin-bottom: 160px;
+    }
+    
+    .news-container {
+        flex-direction: column;
+        height: 600px;
+        gap: 48px;
+    }
+}

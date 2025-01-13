@@ -57,3 +57,19 @@ a {
         background-color: $color-blue-hover;
     }
 }
+
+@media (max-width: 864px) {
+    .main-content-box {
+        margin-top: 360px;
+        flex-direction: column;
+        padding: 0 80px;
+    }
+
+    .card-1 {
+        width: 100%;
+    }
+    
+    .card-2 {
+     width: 100%;
+    }
+}

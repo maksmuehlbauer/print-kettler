@@ -44,3 +44,39 @@
     }
 }
 
+@media (max-width: 1080px) {
+    .offering-card {
+        >div {
+            top: 124px;
+            height: 112px;
+        }
+        img {
+            margin-bottom: 88px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .main-content-box {
+        padding: 0 80px;
+        flex-direction: column;
+        gap: 64px;
+    }
+
+    .offering-card {
+        width: 100%;
+        >div {
+            top: 240px;
+            left: unset;
+            right: unset;
+            width: 60%;
+        }
+        img {
+            width: 75%;
+            margin-bottom: 88px;
+        }
+    }
+}
+
+
+

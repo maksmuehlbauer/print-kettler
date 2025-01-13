@@ -74,3 +74,21 @@ ul {
         background-color: $color-blue-hover;
     }
 }
+
+@media (max-width: 950px) {
+    .cert-box {
+        >img {
+            width: 72px;
+        }
+    }
+}
+
+@media (max-width: 860px) {
+    .d-none {
+        display: none;
+    }
+
+    .main-content-box {
+        justify-content: space-around;
+    }
+}

@@ -140,3 +140,15 @@ h4 {
     font-weight: 400;
     text-transform: initial;
 }
+
+@media (max-width: 1080px) {
+    header {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 950px) {
+    .phone-number-box {
+        display: none;
+    }
+}
