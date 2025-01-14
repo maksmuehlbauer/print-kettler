@@ -81,3 +81,21 @@ p {
         width: 224px;
     }
 }
+
+@media (max-width: 610px) {
+    .main-content-box {
+        padding: 20px;
+    }
+
+    p {
+        line-height: 30px;
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 610px) {
+    .eye-catcher-img {
+        top: -172px;
+        width: 224px;
+    }
+}

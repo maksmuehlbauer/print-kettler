@@ -66,17 +66,52 @@
     .offering-card {
         width: 100%;
         >div {
-            top: 240px;
-            left: unset;
-            right: unset;
+            position: unset;
             width: 60%;
+            height: 56px;
+            margin-bottom: 16px;
         }
         img {
             width: 75%;
-            margin-bottom: 88px;
+            margin-bottom: -16px;
         }
     }
 }
+
+@media (max-width: 640px) {
+    .main-content-box {
+        padding: 0 60px;
+        flex-direction: column;
+        gap: 64px;
+    }
+
+    .offering-card {
+        width: 100%;
+        >div {
+            width: 75%;
+        }
+        img {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 540px) {
+    .mob-size {
+        font-size: 16px;
+    }
+
+    .main-content-box {
+        padding: 0 30px;
+        flex-direction: column;
+        gap: 64px;
+    }
+}
+
+
+
+
+
 
 
 

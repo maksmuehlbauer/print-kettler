@@ -1,11 +1,14 @@
 <header>
     <img routerLink="" src="./assets/img/comp-logo.png" class="img-logo pr-32" alt="logo">
+    <div class="responsive-header-box" [class.mobile-header]="true" [class.expand]="isMenuOpen">
         <div 
-            (mouseenter)="performanceHover = true" 
-            (mouseleave)="performanceHover = false" 
-            class="performance-box"
-            >
-            <a routerLink="/performance" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" [ngClass]="{ 'highlight': isPerformanceActive() || performanceHover }">Leistungen</a>
+        (mouseenter)="performanceHover = true" 
+        (mouseleave)="performanceHover = false" 
+        class="performance-box"
+        >
+            <a routerLink="/performance" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" 
+            [ngClass]="{ 'highlight': isPerformanceActive() || performanceHover }"
+            (click)="toggleMenu()">Leistungen</a>
             <div *ngIf="performanceHover" class="performance-hover-box">
                 <a [routerLink]="['/sub', 'sheetfedoffset']" class="card pl-32">
                     <h4 class="pb-8">Bogenoffset</h4>
@@ -19,16 +22,21 @@
         </div>
 
 
-        <a href="/service" routerLink="/service" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Service</a>
-        <a href="/aboutus" routerLink="/aboutus" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Über uns</a>
-        <a href="/contact" routerLink="/contact" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Kontakt</a>
+        <a href="/service" routerLink="/service" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="toggleMenu()">Service</a>
+        <a href="/aboutus" routerLink="/aboutus" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="toggleMenu()">Über uns</a>
+        <a href="/contact" routerLink="/contact" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="toggleMenu()">Kontakt</a>
         <div class="phone-number-box blue-boxes">
             <img src="./assets/img/phone.png" class="img-icons" alt="">
             <span class="phone-number">02595 91013-0</span>
         </div>
+    </div>
+    <div class="mobile-box">
         <div class="upload-box blue-boxes" (click)="openUploadDialog()">
             <img src="./assets/img/upload.png" class="img-icons" alt="">
             <span class="upload-text">Daten-Upload</span>
         </div>
+        <img src="./assets/img/menu.png" alt="header-menu" class="menu-icon" (click)="toggleMenu()">
+    </div>
+
 </header>
 <app-upload-form *ngIf="uplaodDialogOpen" (closeDialog)="closeUploadDialog()"></app-upload-form>

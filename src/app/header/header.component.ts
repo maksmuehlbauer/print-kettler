@@ -13,7 +13,8 @@ import { RouterModule, Router } from '@angular/router';
 export class HeaderComponent {
 
   uplaodDialogOpen: boolean = false;
-  performanceHover = false;
+  performanceHover: boolean = false;
+  isMenuOpen: boolean = false;
 
   constructor(private router: Router) {
   }
@@ -29,6 +30,10 @@ export class HeaderComponent {
 
   closeUploadDialog() {
     this.uplaodDialogOpen = false;
+  }
+
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen
   }
 
 }

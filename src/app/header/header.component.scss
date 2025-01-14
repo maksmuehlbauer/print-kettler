@@ -1,10 +1,5 @@
 @import './../../styles.scss';
 
-
-// :host {
-//     height: 80px;
-// }
-
 header {
     height: 80px;
     @include display();
@@ -15,21 +10,23 @@ header {
     right: 0;
     filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.2));
     z-index: 100;
-    >a {
-        width: 120px;
-        background-color: $color-white;
-        text-align: center;
-        border-right: 0.5px solid $color-text;
-        height: 80px;
-        @include display();
-        &:hover {
-            background-color: $color-blue;
+    >.responsive-header-box {
+        >a {
+            width: 120px;
+            background-color: $color-white;
+            text-align: center;
+            border-right: 0.5px solid $color-text;
+            height: 80px;
+            @include display();
+            &:hover {
+                background-color: $color-blue;
+                color: $color-white;
+            }
+        }
+        >a.active {
+            background-color: $color-blue !important;
             color: $color-white;
         }
-    }
-    >a.active {
-        background-color: $color-blue !important;
-        color: $color-white;
     }
 }
 
@@ -140,6 +137,10 @@ h4 {
     text-transform: initial;
 }
 
+.menu-icon {
+    display: none;
+}
+
 @media (max-width: 1080px) {
     header {
         padding: 0 20px;
@@ -148,10 +149,97 @@ h4 {
     .performance-hover-box {
         width: 90%;
     }
+
+    .phone-number-box {
+        width: 170px;
+    }
 }
 
 @media (max-width: 950px) {
     .phone-number-box {
         display: none;
     }
+
+    header {
+        >.responsive-header-box {
+            >a {
+                width: 100px;
+                }
+            }
+        }
+    }
+
+
+
+@media (max-width: 750px) {
+    header {
+        justify-content: space-between;
+        >.responsive-header-box {
+            display: none;
+        }
+    }
+
+    .menu-icon {
+        display: block;
+        width: 56px;
+        object-fit: cover;
+        cursor: pointer;
+    }
+
+    .mobile-box {
+        @include display();
+        gap: 20px;
+    }
+
+    .blue-boxes {
+        background-color: $color-white;
+        border-right: 0
+    }
+
+    .img-icons {
+        filter: invert(1);
+        height: 42px;
+    }
+
+    .upload-text {
+        display: none;
+    }
+
+    .img-logo {
+        border-right: 0;
+    }
+
+    .mobile-header {
+        display: block !important;
+        position: absolute;
+        top: 81px;
+        max-height: 0px;
+        left: 0;
+        right: 0;
+        transform: translateY(-405px);
+        z-index: 101;
+        transition: transform 500ms ease-in-out;
+        &.expand {
+            transform: translateY(0);
+        }
+        .performance-box {
+            width: 100%;
+        }
+        a {
+            width: 100% !important;
+            font-size: 24px;
+            border-bottom: 0.5px solid $color-text;
+            &:hover {
+                background-color: $color-white !important;
+                color: $color-text !important;
+            }
+        }
+    }
+
+
+
+    .performance-hover-box {
+        display: none;
+    }
+
 }
