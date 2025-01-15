@@ -23,7 +23,7 @@
 
                             </ul>
                         </div>
-                        <div [ngClass]="{ 'person-information-mobile' : openMenuIndex === i }">
+                        <div [ngClass]="{ 'person-information-mobile' : isMenuOpen[i] }">
                             <ul>
                                 <li>{{ person.name }}</li>
                                 <li>{{ person.titleOne}}</li>

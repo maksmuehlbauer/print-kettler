@@ -12,10 +12,14 @@ import { CommonModule } from '@angular/common';
 export class PersonsComponent {
 
   contactPersons = inject(KettlerService)
-  openMenuIndex: number | null = null;
+  isMenuOpen: boolean[] = [];
 
-  toggleMenu(i: number) {
-    this.openMenuIndex = this.openMenuIndex ? null : i;
+  toggleMenu(index: number) {
+    // Initialisiere, falls der Zustand für den Index noch nicht existiert
+    if (this.isMenuOpen[index] === undefined) {
+      this.isMenuOpen[index] = false;
+    }
+    this.isMenuOpen[index] = this.isMenuOpen[index];
   }
 
 
