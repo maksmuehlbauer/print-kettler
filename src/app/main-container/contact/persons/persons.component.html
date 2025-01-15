@@ -11,7 +11,19 @@
 
                     >
                         <img src="{{ person.img }}" alt="{{ person.name }}">
+                        <button (click)="toggleMenu(i)">I</button>
                         <div class="person-information">
+                            <ul>
+                                <li>{{ person.name }}</li>
+                                <li>{{ person.titleOne}}</li>
+                                <li *ngIf="person.titleTwo">{{ person.titleTwo}}</li>
+                                <li *ngIf="person.titleThree">{{ person.titleThree}}</li>
+                                <li class="mt-8">{{ person.phone }}</li>
+                                <a href="mailto:info@druckerei-kettler.de">{{ person.email }}</a>
+
+                            </ul>
+                        </div>
+                        <div [ngClass]="{ 'person-information-mobile' : openMenuIndex === i }">
                             <ul>
                                 <li>{{ person.name }}</li>
                                 <li>{{ person.titleOne}}</li>
@@ -22,7 +34,9 @@
                             </ul>
                         </div>
                     </div>
+                    
             </div>
         </div>
     </div>
 </div>
+

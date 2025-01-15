@@ -60,7 +60,7 @@ a {
 
 @media (max-width: 864px) {
     .main-content-box {
-        margin-top: 360px;
+        margin-top: 390px;
         flex-direction: column;
         padding: 0 80px;
     }
@@ -71,5 +71,36 @@ a {
     
     .card-2 {
      width: 100%;
+    }
+}
+
+@media (max-width: 730px) and (max-width:610px) {
+    .main-content-box {
+        margin-top: 390px;
+    }
+}
+
+@media (max-width: 650px) {
+    .start-question-box {
+        flex-direction: column;
+    }
+
+    .main-content-box {
+        padding: 40px;
+    }
+
+    .question-p {
+        width: 100%;
+     }
+}
+
+
+@media (max-width: 450px) {
+    .main-content-box {
+        margin-top: 200px;
+    }
+
+    a {
+        width: 240px;
     }
 }

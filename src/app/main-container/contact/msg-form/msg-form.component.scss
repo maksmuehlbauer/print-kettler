@@ -50,7 +50,6 @@ form {
     align-self: flex-start;
     flex-direction: column;
     row-gap: 16px;
-
 }
 
 .input-box {
@@ -213,6 +212,25 @@ textarea {
     100% {
         opacity: 0;
         transform: translateY(30px);
+    }
+}
+
+@media (max-width: 830px) {
+    .form-box {
+        flex-direction: column;
+        padding: 0 60px;
+        width: calc(100% - 120px);    
+    }
+
+    form {
+        width: 100%;
+    }
+}
+
+@media (max-width: 550px) {
+    .form-box {
+        padding: 0 40px;
+        width: calc(100% - 80px);    
     }
 }
 

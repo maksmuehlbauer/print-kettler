@@ -196,6 +196,13 @@ h4 {
         border-right: 0
     }
 
+    .upload-box {
+        width: 80px;
+        &:hover {
+            background-color: $color-white;
+        }
+    }
+
     .img-icons {
         filter: invert(1);
         height: 42px;

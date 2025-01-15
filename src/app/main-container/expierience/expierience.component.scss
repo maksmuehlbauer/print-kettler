@@ -41,12 +41,19 @@ p {
     .main-content-box {
         margin-left: 20px;
         margin-right: 20px;
+
     }
 }
 
-@media (max-width: 950px) {
-    .main-content-box {
-        margin-left: 20px;
-        margin-right: 20px;
+
+@media (max-width: 540px) {
+    .img-container {
+        background-position: center;
+    }
+}
+
+@media (max-width: 510px) {
+    h1 {
+        line-height: 85px;
     }
 }

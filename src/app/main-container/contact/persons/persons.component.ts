@@ -11,7 +11,15 @@ import { CommonModule } from '@angular/common';
 })
 export class PersonsComponent {
 
-contactPersons = inject(KettlerService)
+  contactPersons = inject(KettlerService)
+  openMenuIndex: number | null = null;
+
+  toggleMenu(i: number) {
+    this.openMenuIndex = this.openMenuIndex ? null : i;
+  }
+
+
+
 
 
 }

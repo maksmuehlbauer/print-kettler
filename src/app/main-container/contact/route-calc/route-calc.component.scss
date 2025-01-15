@@ -53,6 +53,31 @@
         height: 44px;
         object-fit: cover;
     }
+}
+
+@media (max-width: 750px) {
+    .route-btn {
+        width: auto !important;
+    }
     
+    h4 {
+        display: none;
+    }
+}
+
+@media (max-width: 560px) {
+    .calc-route-box {
+        >input {
+            width: 248px;
+        }
+    }
+}
+
+@media (max-width: 410px) {
+    .calc-route-box {
+        >input {
+            width: 170px;
+        }
+    }
 }
 

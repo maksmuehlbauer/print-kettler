@@ -27,7 +27,7 @@
 .news-container {
     @include display($ai: flex-start, $jc: flex-start);
     gap: 24px;
-    overflow: hidden;
+    // overflow: hidden;
     height: 320px;
 }
 
@@ -106,6 +106,31 @@
     .news-container {
         flex-direction: column;
         height: 600px;
-        gap: 48px;
+    }
+}
+
+@media (max-width:550px) {
+    .slider-control {
+        img {
+            width: 48px;
+        }
+    }
+
+    .main-content-box {
+        padding: 0 60px;
+    }
+
+    .news-container {
+        padding-bottom: 90px;
+    }
+}
+
+@media (max-width:450px) {
+    .main-content-box {
+        padding: 0 40px;
+    }
+
+    .news-container {
+        padding-bottom: 290px;
     }
 }

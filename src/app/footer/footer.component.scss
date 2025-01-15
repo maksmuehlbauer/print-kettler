@@ -92,3 +92,18 @@ ul {
         justify-content: space-around;
     }
 }
+
+@media (max-width: 650px) {
+    .desktop-only {
+        display: none;
+    }
+
+    .mobile-imprint {
+        width: 80% !important;
+        text-align: center;
+    }
+
+    .link-box {
+        justify-content: center;
+    }
+}
