@@ -19,7 +19,7 @@ export class PersonsComponent {
     if (this.isMenuOpen[index] === undefined) {
       this.isMenuOpen[index] = false;
     }
-    this.isMenuOpen[index] = this.isMenuOpen[index];
+    this.isMenuOpen[index] = !this.isMenuOpen[index];
   }
 
 
