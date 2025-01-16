@@ -12,14 +12,13 @@ h2 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 16px;
-    // background-color: yellow;
-
 }
 
 .person-card {
     position: relative;
     height: 219px;
     overflow: hidden;
+    object-fit: cover;
     img {
         width: 100%;
         object-fit: cover;
@@ -79,6 +78,27 @@ button {
 }
 
 @media (max-width: 1024px) {
+    .content-box {
+        margin-top: 64px;
+        @include display();
+        flex-direction: column;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    .person-card {
+        height: 276px;
+        // width: 100%
+    }
+
+    .persons-box {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
     .person-information {
         display: none !important;
     }
@@ -95,6 +115,7 @@ button {
     }
 
     .person-information-mobile {
+        height: 276px;
         display: flex;
         position: absolute;
         top: 0;
@@ -105,4 +126,85 @@ button {
         opacity: 1;
     }
 }
+
+@media (max-width: 955px) {
+    .person-card {
+        height: 250px;
+    }
+
+    .person-information-mobile {
+        height: 250px;
+    }
+
+}
+
+@media (max-width: 830px) {
+    .person-card {
+        height: 205px;
+    }
+
+    .person-information-mobile {
+        height: 205px;
+    }
+
+    .persons-box {
+        margin: 0 40px;
+    }
+}
+
+@media (max-width: 725px) {
+    .persons-box {
+        display: grid;
+        grid-template-columns: repeat(1, 0fr);
+        gap: 16px;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
+    .person-card {
+        height: 280px;
+        overflow: visible;
+        img {
+            height: 280px;
+            width: unset;
+            object-fit: cover;
+        }
+    }
+
+    .person-information-mobile {
+        height: 280px;
+    }
+
+}
+
+@media (max-width: 500px) {
+    h2 {
+        font-size: 24px;
+    }
+
+    .person-card {
+        height: 170px;
+        overflow: visible;
+        img {
+            height: 170px;
+            width: 260px;
+            object-fit: cover;
+        }
+    }
+
+    .person-information-mobile {
+        height: 170px;
+        ul {
+            font-size: 12px;
+        }
+        a {
+            font-size: 12px; 
+        }
+    }
+}
+
+
+
 
