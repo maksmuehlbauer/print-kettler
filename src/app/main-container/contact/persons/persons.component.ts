@@ -22,7 +22,7 @@ export class PersonsComponent {
   }
 
 
-  switchClassAnimation(i:number):string {
+  switchClass(i:number):string {
     return this.isMenuOpen[i] ? 'person-information-mobile' : ''
   }
 

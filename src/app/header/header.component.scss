@@ -243,10 +243,18 @@ h4 {
         }
     }
 
-
-
     .performance-hover-box {
         display: none;
     }
+}
 
+@media (max-width: 360px) {
+    .menu-icon {
+        width: 40px;
+    }
+
+    .mobile-box {
+        @include display();
+        gap: 12px;
+    }
 }
