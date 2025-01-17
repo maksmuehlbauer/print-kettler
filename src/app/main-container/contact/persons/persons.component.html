@@ -11,7 +11,7 @@
 
                     >
                         <img src="{{ person.img }}" alt="{{ person.name }}">
-                        <button (click)="toggleMenu(i)">I</button>
+                        <img src="./assets/img/info-white.png" (click)="toggleMenu(i)" class="info-img" [class.active]="isMenuOpen[i]">
                         <div class="person-information">
                             <ul>
                                 <li>{{ person.name }}</li>
@@ -23,7 +23,7 @@
 
                             </ul>
                         </div>
-                        <div [ngClass]="{ 'person-information-mobile' : isMenuOpen[i] }">
+                        <div [ngClass]="switchClassAnimation(i)">
                             <ul>
                                 <li>{{ person.name }}</li>
                                 <li>{{ person.titleOne}}</li>

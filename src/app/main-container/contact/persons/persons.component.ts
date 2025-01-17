@@ -15,13 +15,16 @@ export class PersonsComponent {
   isMenuOpen: boolean[] = [];
 
   toggleMenu(index: number) {
-    // Initialisiere, falls der Zustand für den Index noch nicht existiert
     if (this.isMenuOpen[index] === undefined) {
       this.isMenuOpen[index] = false;
     }
     this.isMenuOpen[index] = !this.isMenuOpen[index];
   }
 
+
+  switchClassAnimation(i:number):string {
+    return this.isMenuOpen[i] ? 'person-information-mobile' : ''
+  }
 
 
 
