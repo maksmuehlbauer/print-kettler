@@ -65,3 +65,63 @@ a {
     }
 }
 
+.linkStyle {
+    color: $color-blue;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+@media (max-width: 840px) {
+    .card-box {
+        padding: 0 40px;
+        width: auto;
+        >.index-box {
+            width: 30%;
+        }
+        >.left-content {
+            width: 60%;
+        }
+    }
+}
+
+@media (max-width: 750px) {
+    .card-box {
+        padding: 0 40px;
+        width: auto;
+        justify-content: center;
+        gap: 24px;
+        >.index-box {
+            flex: 0;
+        }
+        >.left-content {
+            flex: 1;
+        }
+    }
+
+    h2 {
+        font-size: 32px !important;
+    }
+
+    p {
+        line-height: 22px !important;
+    }
+}
+
+@media (max-width: 610px) {
+    h4 {
+        margin-top: 24px;
+    }
+
+    p {
+        margin-top: 16px !important;
+    }
+}
+
+@media (max-width: 550px) {
+    .card-box {
+        >.index-box {
+            display: none;
+        }
+    }
+}
+

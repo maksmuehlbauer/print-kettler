@@ -20,4 +20,9 @@ export class ServiceComponent {
     }
   }
 
+  searchGoogleProfile(profileType:string) {
+    const keyword = profileType
+    const googleSearchUrl = `https://www.google.com/search?q=${encodeURIComponent(keyword)}`;
+    window.open(googleSearchUrl, '_blank')
+  }
 }
