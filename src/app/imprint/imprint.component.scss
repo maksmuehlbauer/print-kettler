@@ -23,3 +23,46 @@ p {
 .strong {
     font-weight: 500;
 }
+
+@media (max-width:840px) {
+    .main-content-box {
+        padding: 120px 40px 0 40px;
+    }
+}
+
+@media (max-width:770px) {
+    .main-content-box {
+        .copy-h1 {
+            font-size: 72px;
+        }
+    }
+}
+
+@media (max-width:640px) {
+    .main-content-box {
+        .copy-h1 {
+            font-size: 48px;
+        }
+    }
+}
+
+@media (max-width:510px) {
+    .main-content-box {
+        .copy-h1 {
+            font-size: 32px;
+        }
+    }
+
+    p {
+        line-height: 22px !important;
+        font-size: 15px !important;
+    }
+
+    h2 {
+        font-size: 24px !important;
+    }
+
+    h3 {
+        font-size: 16px !important;
+    }
+}
