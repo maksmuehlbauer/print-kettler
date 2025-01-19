@@ -100,6 +100,27 @@ h4 {
     .img-outdoor {
         width: 360px !important;
     }
+
+    .cards {
+        width: auto;
+        height: 200px;
+        gap: 12px;
+    }
+}
+
+@media (max-width: 400px) {
+    .img-outdoor {
+        width: 260px !important;
+    }
+
+    .cards {
+        gap: 24px;
+        .cert-box {
+            img {
+                width: 72px;
+            }
+        }
+    } 
 }
 
 

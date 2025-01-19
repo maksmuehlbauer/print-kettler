@@ -22,3 +22,30 @@ div {
 .qoute-top {
     align-self: flex-start;
 }
+
+@media (max-width: 750px) {
+    .qoute-top, .qoute-bottom {
+        font-size: 48px;
+        text-align: center;
+        align-self: center;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 550px) {
+    .qoute-top, .qoute-bottom {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 450px) {
+    .qoute-top, .qoute-bottom {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 360px) {
+    .qoute-top, .qoute-bottom {
+        font-size: 20px;
+    }
+}
